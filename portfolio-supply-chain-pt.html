@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Otimização de Cadeia de Suprimentos | Felipe Sembay</title>
+    <meta content="Projeto de data science: Previsão de demanda em estoques logísticos usando Forecasting/Prophet."
+        name="description">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img"><img src="assets/img/my-profile-img.png" alt="Felipe Sembay"
+                class="img-fluid rounded-circle"></div>
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Felipe Sembay</h1>
+        </a>
+        <div class="lang-switcher">
+            <a href="portfolio-supply-chain.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-supply-chain-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+        <div class="social-links text-center">
+            <a href="https://github.com/felipesembay" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/felipesembay" class="linkedin" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index-pt.html#hero"><i class="bi bi-house navicon"></i> Início</a></li>
+                <li><a href="index-pt.html#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="index-pt.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="index-pt.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfólio</a>
+                </li>
+                <li><a href="index-pt.html#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="index-pt.html#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Previsão e Setup da Cadeia de Suprimentos</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index-pt.html">Início</a></li>
+                        <li><a href="index-pt.html#portfolio">Portfólio</a></li>
+                        <li class="current">Cadeia de Suprimentos</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-truck"></i>
+                                        <p>Adicione imagens em assets/img/projects/supply-chain/</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-graph-up"></i>
+                                        <p>Gráfico de Padrão Real vs. Forecast</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-calendar-range"></i>
+                                        <p>Decomposição Sazonal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Informações do Projeto</h3>
+                            <ul>
+                                <li><strong>Categoria:</strong> Analytics / Séries Temporais</li>
+                                <li><strong>Tipo:</strong> Previsão de Demanda</li>
+                                <li><strong>Status:</strong> Concluído</li>
+                                <li><strong>GitHub:</strong> <a href="https://github.com/felipesembay"
+                                        target="_blank">Ver Repositório →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Tecnologias:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Prophet</span>
+                                <span class="tech-badge">Statsmodels</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Streamlit</span>
+                                <span class="tech-badge">Plotly</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>Otimização de Supply Chain</h2>
+                            <p>Trabalho focado na construção de modelo de regressão e séries temporais para o
+                                planejamento unificado do suprimento de mercadorias no ambiente B2B. As extrações
+                                automáticas treinaram múltiplos algoritmos através do FB Prophet isolando em famílias de
+                                SKUs para enxergar ciclos semanais intrincados e flutuação macro.</p>
+                            <p>O foco em otimização do estoque reverso atingiu o excelente patamar de mitigar em quase
+                                um quinto a rotura na ponta final e liberar fluxo de caixa livre nas métricas da
+                                companhia.</p>
+                            <h4 class="mt-3">Principais Destaques</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> Lógica multi-modelos para previsão
+                                    de 50 SKUs segmentados em 12 ciclos abertos a frente</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Estudo e controle em nível de
+                                    validação cruzada atingindo MAPE &lt; 12%</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Uso contínuo de matriz de intervalos
+                                    de confiança definindo quantitativo do estoque de segurança em tempo real</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Felipe Sembay</strong> <span>Todos os Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">Design por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

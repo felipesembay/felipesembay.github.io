@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Precificação de Imóveis | Felipe Sembay</title>
+    <meta content="Trabalho de Data Science focado no mercado imobiliário com Plotly e mapeamento geoespacial."
+        name="description">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img"><img src="assets/img/my-profile-img.png" alt="Felipe Sembay"
+                class="img-fluid rounded-circle"></div>
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Felipe Sembay</h1>
+        </a>
+        <div class="lang-switcher">
+            <a href="portfolio-real-estate-eda.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-real-estate-eda-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+        <div class="social-links text-center">
+            <a href="https://github.com/felipesembay" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/felipesembay" class="linkedin" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index-pt.html#hero"><i class="bi bi-house navicon"></i> Início</a></li>
+                <li><a href="index-pt.html#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="index-pt.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="index-pt.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfólio</a>
+                </li>
+                <li><a href="index-pt.html#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="index-pt.html#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">EDA do Mercado Imobiliário</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index-pt.html">Início</a></li>
+                        <li><a href="index-pt.html#portfolio">Portfólio</a></li>
+                        <li class="current">EDA Imobiliário</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-map"></i>
+                                        <p>Adicione imagens em assets/img/projects/real-estate-eda/</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-scatter-chart"></i>
+                                        <p>Dispersão de Preço x Área</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-grid-3x3"></i>
+                                        <p>Matriz de Correlação</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Informações do Projeto</h3>
+                            <ul>
+                                <li><strong>Categoria:</strong> Ciência de Dados & Machine Learning</li>
+                                <li><strong>Tipo:</strong> Projeto End-to-End (EDA → Modelagem → Deploy → Monitoramento)
+                                </li>
+                                <li><strong>Status:</strong> Concluído (com evolução contínua)</li>
+                                <li><strong>GitHub:</strong> <a
+                                        href="https://github.com/felipesembay/Price_house_ponta_grossa"
+                                        target="_blank">Ver Repositório →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Tecnologias:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Numpy</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">XGBoost</span>
+                                <span class="tech-badge">Folium</span>
+                                <span class="tech-badge">Seaborn</span>
+                                <span class="tech-badge">Geopandas</span>
+                                <span class="tech-badge">OSMnx</span>
+                                <span class="tech-badge">Streamlit</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">MLflow</span>
+                                <span class="tech-badge">Evidently</span>
+                                <span class="tech-badge">Metabase</span>
+                                <span class="tech-badge">Grafana</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>Precificação Inteligente de Imóveis com Geolocalização</h2>
+                            <p>Projeto completo de precificação imobiliária que vai desde a análise exploratória dos
+                                dados até a implementação de um sistema de predição em produção, utilizando
+                                características estruturais do imóvel e features geoespaciais dinâmicas.</p>
+                            <p>O modelo estima o valor de imóveis a partir do endereço (via Google Maps), calcula
+                                automaticamente scores de localização com base em POIs do OpenStreetMap (escolas,
+                                hospitais, mercados, parques, segurança, etc.) e retorna a previsão em tempo real por
+                                meio de uma API.
+                                Todo o pipeline foi desenvolvido com foco em escalabilidade, rastreabilidade e
+                                monitoramento do modelo.
+                            </p>
+                            <h4 class="mt-3">Principais Destaques</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> Pipeline completo de Machine
+                                    Learning em produção</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Enriquecimento automático dos dados
+                                    via Google Maps + OpenStreetMap</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Cálculo dinâmico de scores
+                                    geoespaciais em qualquer cidade do Brasil</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Comparação entre preço anunciado vs.
+                                    preço previsto, com métricas de erro</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Monitoramento de data drift e
+                                    performance do modelo</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> eparação clara entre camada de
+                                    dados, modelo, API, frontend e observabilidade</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Dashboard interativo com Metabase +
+                                    Grafana</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Felipe Sembay</strong> <span>Todos os Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">Design por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Felipe Sembay | Cientista de Dados & Engenheiro de ML</title>
+    <meta
+        content="Portfólio de Felipe Sembay – Cientista de Dados, Analista de Dados e Engenheiro de Machine Learning especializado em Python, SQL e análise avançada."
+        name="description">
+    <meta content="ciência de dados, machine learning, analista de dados, Python, SQL, Felipe Sembay, portfólio"
+        name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a.active-lang {
+            background: var(--accent-color, #0563bb);
+            border-color: var(--accent-color, #0563bb);
+        }
+
+        .lang-switcher a:not(.active-lang):hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+    </style>
+
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/my-profile-img.png" alt="Felipe Sembay" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Felipe Sembay</h1>
+        </a>
+
+        <div class="lang-switcher">
+            <a href="index.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="index-pt.html" class="active-lang"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+
+        <div class="social-links text-center">
+            <a href="https://github.com/felipesembay" class="github" title="GitHub" target="_blank"><i
+                    class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/felipesembay" class="linkedin" title="LinkedIn" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Início</a></li>
+                <li><a href="#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfólio</a></li>
+                <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="assets/img/hero-bg.png" alt="" data-aos="fade-in" class="">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <h2>Felipe Sembay</h2>
+                <p>Eu sou <span class="typed"
+                        data-typed-items="Cientista de Dados,Analista de Dados,Engenheiro de ML,Desenvolvedor Python">Cientista
+                        de Dados</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            </div>
+
+        </section><!-- /Hero Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Sobre</h2>
+                <p>Sou Cientista de Dados com forte foco em análise estatística, séries temporais e Machine Learning
+                    aplicados a problemas reais de negócio. Tenho experiência construindo pipelines de dados, modelos
+                    preditivos e sistemas analíticos end-to-end, desde a coleta e tratamento até a entrega em produção e
+                    visualização de insights.
+                    Transformo dados complexos em decisões claras, modelos preditivos e soluções que geram impacto real
+                    no negócio.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-lg-4">
+                        <img src="assets/img/my-profile-img.png" class="img-fluid" alt="Felipe Sembay">
+                    </div>
+                    <div class="col-lg-8 content">
+                        <h2>Cientista de Dados &amp; Engenheiro de ML</h2>
+                        <p class="fst-italic py-3">
+                            Com sólida experiência em pipelines de dados de ponta a ponta, modelagem estatística e
+                            machine learning, ajudo organizações a extrair o valor escondido em seus dados — da análise
+                            exploratória a modelos preditivos prontos para produção.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Localização:</strong>
+                                        <span>Brasil</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong>
+                                        <span>github.com/felipesembay</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>E-mail:</strong>
+                                        <span>felipesembay91@gmail.com</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
+                                        <span>Disponível</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Formação:</strong> <span>Graduação
+                                            em Economia
+                                        </span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Foco:</strong> <span>Ciência de
+                                            Dados &amp; ML</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Idiomas:</strong> <span>Português,
+                                            Inglês</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Modelo:</strong> <span>Remoto &amp;
+                                            Híbrido</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="py-3">
+                            Atuo em toda a stack de dados, da ingestão e transformação à modelagem, visualização e
+                            implantação
+                            de modelos em produção, sempre com foco em impacto mensurável no negócio.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /About Section -->
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-diagram-3"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p><strong>Projetos Entregues</strong> <span>soluções de dados ponta a ponta</span></p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p><strong>Modelos em Produção</strong> <span>preditivos e de classificação</span></p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-database"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p><strong>Anos de Experiência</strong> <span>em dados e analytics</span></p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-award"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p><strong>Certificações</strong> <span>ciência de dados, estatística e machine
+                                    learning</span></p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Stats Section -->
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section light-background">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Habilidades</h2>
+                <p>Expertise técnica abrangendo todo o ciclo de dados — da ingestão e transformação à modelagem e
+                    implantação.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row skills-content skills-animation">
+
+                    <div class="col-lg-6">
+
+                        <div class="progress">
+                            <span class="skill"><span>Python (Pandas, NumPy, Scikit-learn)</span> <i
+                                    class="val">95%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>SQL &amp; Bancos de Dados (PostgreSQL, MySQL)</span> <i
+                                    class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>Machine Learning &amp; Deep Learning</span> <i
+                                    class="val">85%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="progress">
+                            <span class="skill"><span>Visualização de Dados (Power BI, Google Data Studio,Plotly,
+                                    Metabase)</span> <i class="val">85%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>Estatística &amp; Probabilidade</span> <i
+                                    class="val">85%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>Cloud &amp; MLOps (AWS / GCP / Docker)</span> <i
+                                    class="val">70%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Skills Section -->
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Currículo</h2>
+                <p>Profissional orientado a resultados com experiência em análise de dados, modelagem estatística e
+                    engenharia de machine learning, comprometido em entregar impacto mensurável nos negócios por meio
+                    dos dados.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="resume-title">Resumo</h3>
+
+                        <div class="resume-item pb-0">
+                            <h4>Felipe Sembay</h4>
+                            <p><em>Cientista de Dados e Engenheiro de Machine Learning com sólida experiência na
+                                    construção de pipelines de dados ponta a ponta, modelos preditivos e dashboards
+                                    analíticos. Apaixonado por resolver problemas complexos por meio de abordagens
+                                    orientadas por dados.</em></p>
+                            <ul>
+                                <li>Brasil</li>
+                                <li>felipesembay91@gmail.com</li>
+                                <li>linkedin.com/in/felipesembay</li>
+                            </ul>
+                        </div><!-- End Resume Item -->
+
+                        <h3 class="resume-title">Formação</h3>
+                        <div class="resume-item">
+                            <h4>Graduação em Economia</h4>
+                            <h5>2010 – 2017</h5>
+                            <p><em>Universidade Estadual do Centro Oeste - Unicentro, Brasil</em></p>
+                            <p>Formação sólida em análise econômica, estatística, econometria e métodos quantitativos,
+                                com forte base analítica aplicada posteriormente à ciência de dados e modelagem
+                                preditiva.</p>
+                        </div><!-- End Resume Item -->
+
+                        <div class="resume-item">
+                            <h4>Graduação em Engenharia de Produção<span style="font-weight: normal;"> (não
+                                    concluída)</span></h4>
+                            <h5>2016 – Incompleta</h5>
+                            <p><em>Universidade Cesumar, Brasil</em></p>
+                            <p>Ênfase em processos, otimização, pesquisa operacional, estatística aplicada e análise de
+                                sistemas, contribuindo para visão sistêmica e tomada de decisão orientada por dados.</p>
+                        </div><!-- End Resume Item -->
+
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="resume-title">Experiência Profissional</h3>
+
+                        <div class="resume-item">
+                            <h4>Cientista de Dados</h4>
+                            <h5>Março 2025 – Fevereiro 2026</h5>
+                            <p><em>Qintess · Brasil</em></p>
+                            <ul>
+                                <li>
+                                    Atuação em projetos de ciência de dados com foco em análise estatística, séries
+                                    temporais
+                                    e modelagem preditiva aplicadas a problemas reais de negócio.
+                                </li>
+                                <li>
+                                    Desenvolvimento e manutenção de pipelines de dados e machine learning,
+                                    desde a ingestão, tratamento e feature engineering até o treinamento e avaliação de
+                                    modelos.
+                                </li>
+                                <li>
+                                    Construção de modelos de regressão e classificação para apoio à tomada de decisão,
+                                    utilizando Python, SQL e bibliotecas de machine learning.
+                                </li>
+                                <li>
+                                    Integração entre áreas técnicas e de negócio, traduzindo demandas estratégicas
+                                    em soluções analíticas claras e acionáveis.
+                                </li>
+                            </ul>
+                        </div><!-- End Resume Item -->
+
+                        <div class="resume-item">
+                            <h4>Dados, Analytics e Automação</h4>
+                            <h5>Abril 2023 – Fevereiro 2025</h5>
+                            <p><em>Charisma BI · Brasil</em></p>
+                            <ul>
+                                <li>
+                                    Desenvolvimento e manutenção de pipelines de dados, automações e ETLs para múltiplos
+                                    clientes, garantindo qualidade, consistência e atualização contínua das informações.
+                                </li>
+                                <li>
+                                    Criação e otimização de dashboards, indicadores e estudos analíticos, incluindo
+                                    modelos de séries temporais para projeções e suporte à tomada de decisão.
+                                </li>
+                                <li>
+                                    Automação de processos de coleta, tratamento e carga de dados (web scraping, APIs e
+                                    SQL), reduzindo tempos de execução em mais de 70%.
+                                </li>
+                                <li>
+                                    Pesquisa, desenvolvimento e prototipação de soluções baseadas em dados, incluindo
+                                    bots, aplicações com LLMs e interfaces em Streamlit, com bases em PostgreSQL.
+                                </li>
+                            </ul>
+                        </div><!-- End Resume Item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Resume Section -->
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section light-background">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Portfólio</h2>
+                <p>Uma seleção de projetos de ciência de dados, machine learning e analytics que demonstram aplicações
+                    reais e profundidade técnica.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">Todos</li>
+                        <li data-filter=".filter-ml">Machine Learning</li>
+                        <li data-filter=".filter-analytics">Analytics</li>
+                        <li data-filter=".filter-viz">Visualização</li>
+                    </ul><!-- End Portfolio Filters -->
+
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Previsão de Churn">
+                                <div class="portfolio-info">
+                                    <h4>Previsão de Churn de Clientes</h4>
+                                    <p>Modelo Gradient Boosting com 87% AUC-ROC para churn em telecomunicações</p>
+                                    <a href="assets/img/portfolio/app-1.jpg" title="Previsão de Churn"
+                                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-churn-pt.html" title="Mais Detalhes" class="details-link"><i
+                                            class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-analytics">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid"
+                                    alt="Analytics de Vendas">
+                                <div class="portfolio-info">
+                                    <h4>Dashboard de Analytics de Vendas</h4>
+                                    <p>Painel Power BI monitorando KPIs para rede varejista</p>
+                                    <a href="assets/img/portfolio/product-1.jpg" title="Analytics de Vendas"
+                                        data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-sales-dashboard-pt.html" title="Mais Detalhes"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-viz">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/real_estate.jpg" class="img-fluid"
+                                    alt="Mercado Imobiliário">
+                                <div class="portfolio-info">
+                                    <h4>Precificação de Imóveis</h4>
+                                    <p>Projeto completo de precificação de imóveis com machine learning</p>
+                                    <a href="assets/img/portfolio/real_estate.jpg" title="EDA Imobiliário"
+                                        data-gallery="portfolio-gallery-real-estate" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-real-estate-eda-pt.html" title="Mais Detalhes"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid"
+                                    alt="Análise de Sentimentos">
+                                <div class="portfolio-info">
+                                    <h4>Análise de Sentimentos com NLP</h4>
+                                    <p>Classificador baseado em BERT para sentimento em avaliações</p>
+                                    <a href="assets/img/portfolio/books-1.jpg" title="Análise de Sentimentos"
+                                        data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-nlp-sentiment-pt.html" title="Mais Detalhes"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-analytics">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="Risco Financeiro">
+                                <div class="portfolio-info">
+                                    <h4>Análise de Risco Financeiro</h4>
+                                    <p>Score de crédito com regressão logística &amp; SHAP</p>
+                                    <a href="assets/img/portfolio/app-2.jpg" title="Risco Financeiro"
+                                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-financial-risk-pt.html" title="Mais Detalhes"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-viz">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid"
+                                    alt="Cadeia de Suprimentos">
+                                <div class="portfolio-info">
+                                    <h4>Otimização da Cadeia de Suprimentos</h4>
+                                    <p>Previsão de demanda com modelos de série temporal (Prophet)</p>
+                                    <a href="assets/img/portfolio/product-2.jpg" title="Cadeia de Suprimentos"
+                                        data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-supply-chain-pt.html" title="Mais Detalhes"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Portfolio Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Serviços</h2>
+                <p>Ofereço serviços de dados de ponta a ponta — desde estratégia e análise até desenvolvimento e
+                    implantação de modelos — adaptados aos seus desafios de negócio.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon flex-shrink-0"><i class="bi bi-bar-chart-line"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Análise de Dados
+                                    &amp; Insights</a></h4>
+                            <p class="description">Análise exploratória, testes estatísticos e relatórios para revelar
+                                padrões acionáveis nos dados do seu negócio.</p>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon flex-shrink-0"><i class="bi bi-cpu"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Modelos de Machine
+                                    Learning</a></h4>
+                            <p class="description">Modelos preditivos personalizados (classificação, regressão,
+                                clustering) projetados, treinados e validados para resolver problemas reais.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon flex-shrink-0"><i class="bi bi-graph-up"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Dashboards &amp;
+                                    Visualização</a></h4>
+                            <p class="description">Dashboards interativos e executivos em Power BI, Tableau ou Python
+                                (Plotly/Streamlit) que contam histórias com dados.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon flex-shrink-0"><i class="bi bi-database-gear"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Engenharia de Dados
+                                    &amp; Pipelines</a></h4>
+                            <p class="description">Projeto de pipelines ETL/ELT, modelagem de data warehouse e automação
+                                para garantir fluxos de dados limpos e confiáveis.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon flex-shrink-0"><i class="bi bi-cloud-check"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">MLOps &amp; Deploy
+                                    de Modelos</a></h4>
+                            <p class="description">Empacotamento, containerização e implantação de modelos de ML em
+                                produção com monitoramento, versionamento e CI/CD.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon flex-shrink-0"><i class="bi bi-lightbulb"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Estratégia de Dados
+                                    &amp; Consultoria</a></h4>
+                            <p class="description">Consultoria em maturidade de dados, seleção de tecnologias e boas
+                                práticas para ajudar equipes a construir uma cultura de dados sólida.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Services Section -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contato</h2>
+                <p>Interessado em trabalharmos juntos ou tem um desafio de dados para discutir? Entre em contato —
+                    adoraria ouvir sobre você.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-5">
+
+                        <div class="info-wrap">
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                                <div>
+                                    <h3>Localização</h3>
+                                    <p>Brasil (Disponível remotamente)</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                                <i class="bi bi-linkedin flex-shrink-0"></i>
+                                <div>
+                                    <h3>LinkedIn</h3>
+                                    <p>linkedin.com/in/felipesembay</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                                <i class="bi bi-envelope flex-shrink-0"></i>
+                                <div>
+                                    <h3>E-mail</h3>
+                                    <p>felipesembay91@gmail.com</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                                <i class="bi bi-github flex-shrink-0"></i>
+                                <div>
+                                    <h3>GitHub</h3>
+                                    <p>github.com/felipesembay</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="php-email-form"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <label for="name-field" class="pb-2">Seu Nome</label>
+                                    <input type="text" name="name" id="name-field" class="form-control" required="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email-field" class="pb-2">Seu E-mail</label>
+                                    <input type="email" class="form-control" name="email" id="email-field" required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="subject-field" class="pb-2">Assunto</label>
+                                    <input type="text" class="form-control" name="subject" id="subject-field"
+                                        required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="message-field" class="pb-2">Mensagem</label>
+                                    <textarea class="form-control" name="message" rows="10" id="message-field"
+                                        required=""></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">Carregando</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
+
+                                    <button type="submit">Enviar Mensagem</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Contact Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Felipe Sembay</strong> <span>Todos os Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">
+                Desenvolvido com <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Contact Form Handler (Formspree – no PHP needed) -->
+    <script src="assets/js/contact-form.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

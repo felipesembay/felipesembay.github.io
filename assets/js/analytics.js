@@ -39,17 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Handle page unload/navigation away to record the final view time
-    window.addEventListener('beforeunload', () => {
-        Object.keys(sectionTimers).forEach(sectionId => {
-            const timeSpentSeconds = Math.round((Date.now() - sectionTimers[sectionId]) / 1000);
-            if (timeSpentSeconds > 2) {
-                gtag('event', 'screen_view_duration', {
-                    'screen_name': sectionId,
-                    'engagement_time_sec': timeSpentSeconds,
-                    'page_path': window.location.pathname
-                });
-            }
-        });
+    // Use visibilitychange instead of beforeunload to reliably track when the user leaves the page or switches tabs
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            Object.keys(sectionTimers).forEach(sectionId => {
+                const timeSpentSeconds = Math.round((Date.now() - sectionTimers[sectionId]) / 1000);
+                if (timeSpentSeconds > 2) {
+                    gtag('event', 'screen_view_duration', {
+                        'screen_name': sectionId,
+                        'engagement_time_sec': timeSpentSeconds,
+                        'page_path': window.location.pathname
+                    });
+                }
+                // Reset timer for if they come back to the tab
+                sectionTimers[sectionId] = Date.now();
+            });
+        } else if (document.visibilityState === 'visible') {
+            // Restart timers
+            Object.keys(sectionTimers).forEach(sectionId => {
+                sectionTimers[sectionId] = Date.now();
+            });
+        }
     });
 });

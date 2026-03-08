@@ -84,17 +84,17 @@
         }
     </style>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-JK8WBCFGK1', {
-      'send_page_view': true
-    });
-  </script>
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
 </head>
 
 <body class="portfolio-details-page">
@@ -130,12 +130,12 @@
     <main class="main">
         <div class="page-title dark-background">
             <div class="container d-lg-flex justify-content-between align-items-center">
-                <h1 class="mb-2 mb-lg-0">Supply Chain Optimisation</h1>
+                <h1 class="mb-2 mb-lg-0">Brazil M2 Growth Prediction</h1>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#portfolio">Portfolio</a></li>
-                        <li class="current">Supply Chain</li>
+                        <li class="current">M2 Prediction</li>
                     </ol>
                 </nav>
             </div>
@@ -150,21 +150,20 @@
                 { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
               </script>
                             <div class="swiper-wrapper align-items-center">
-                                <!-- ADD YOUR IMAGES: assets/img/projects/supply-chain/ -->
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-truck"></i>
-                                        <p>Add screenshots to assets/img/projects/supply-chain/</p>
-                                    </div>
+                                    <img src="assets/img/projects/supply-chain/1.png" alt="" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-graph-up"></i>
-                                        <p>Forecast vs Actual Chart</p>
-                                    </div>
+                                    <img src="assets/img/projects/supply-chain/2.png" alt="" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-calendar-range"></i>
-                                        <p>Seasonality Decomposition</p>
-                                    </div>
+                                    <img src="assets/img/projects/supply-chain/3.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/supply-chain/4.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/supply-chain/5.png" alt="" class="img-fluid">
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
@@ -176,7 +175,7 @@
                             <h3>Project Information</h3>
                             <ul>
                                 <li><strong>Category:</strong> Analytics / Time Series</li>
-                                <li><strong>Type:</strong> Demand Forecasting</li>
+                                <li><strong>Type:</strong> Macro M2 Forecasting</li>
                                 <li><strong>Status:</strong> Completed</li>
                                 <li><strong>GitHub:</strong> <a href="https://github.com/felipesembay"
                                         target="_blank">View Repository →</a></li>
@@ -192,22 +191,22 @@
                             </div>
                         </div>
                         <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-                            <h2>Supply Chain Optimisation</h2>
-                            <p>Time-series forecasting system for demand planning across 50+ SKUs in a distribution
-                                company. Prophet models were trained per product family, capturing weekly seasonality,
-                                holidays and trend changepoints to generate 12-week forward forecasts.</p>
-                            <p>The solution reduced stockout events by 18% and cut excess inventory costs by reducing
-                                over-ordering on slow-moving items.</p>
+                            <h2>Brazil M2 Monetary Aggregate Forecasting</h2>
+                            <p>This project focuses on predicting the growth of the M2 monetary aggregate in the
+                                Brazilian economy. M2 is an indicator that measures the amount of currency "issued" and
+                                available in the economy (currency in circulation, demand deposits, and time deposits),
+                                serving as a crucial proxy used to anticipate inflation scenarios.</p>
+                            <p>To produce these forecasts, macroeconomic time-series models were built using advanced
+                                techniques to extract trends and seasonalities from the data, isolating historical
+                                patterns and identifying global macroeconomic fluctuations.</p>
                             <h4 class="mt-3">Key Highlights</h4>
                             <ul>
-                                <li><i class="bi bi-check-circle text-primary"></i> Multi-model architecture with
-                                    automated retraining</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> MAPE &lt; 12% across all SKU
-                                    families</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Confidence intervals for
-                                    safety-stock planning</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Streamlit dashboard for ops team
-                                    self-service</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Time-series prediction algorithm
+                                    development tailored to macroeconomic series modeling</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Critical insights on Brazilian
+                                    market liquidity over time as an inflation parameter</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Extended confidence intervals
+                                    visualization to represent forecasting uncertainty</li>
                             </ul>
                         </div>
                     </div>
@@ -240,7 +239,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/analytics.js"></script>
 </body>
 
 </html>

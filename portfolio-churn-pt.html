@@ -102,6 +102,12 @@
             opacity: 0.5;
             margin: 0;
         }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -185,22 +191,19 @@
 
                             <div class="swiper-wrapper align-items-center">
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide">
-                                        <i class="bi bi-image"></i>
-                                        <p>Adicione as imagens do projeto em assets/img/projects/churn/</p>
-                                    </div>
+                                    <img src="assets/img/projects/churn/churn-1.png" alt="Imagem do Projeto Churn 1">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide">
-                                        <i class="bi bi-bar-chart-line"></i>
-                                        <p>Curva ROC / Matriz de Confusão</p>
-                                    </div>
+                                    <img src="assets/img/projects/churn/churn-2.png" alt="Imagem do Projeto Churn 2">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide">
-                                        <i class="bi bi-graph-up"></i>
-                                        <p>Gráfico de Importância de Features</p>
-                                    </div>
+                                    <img src="assets/img/projects/churn/churn-3.png" alt="Imagem do Projeto Churn 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/churn/churn-4.png" alt="Imagem do Projeto Churn 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/churn/churn-5.png" alt="Imagem do Projeto Churn 5">
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
@@ -227,29 +230,42 @@
                                 <span class="tech-badge">Pandas</span>
                                 <span class="tech-badge">SHAP</span>
                                 <span class="tech-badge">Matplotlib</span>
-                                <span class="tech-badge">Seaborn</span>
+                                <span class="tech-badge">Optuna</span>
+                                <span class="tech-badge">MLflow</span>
                             </div>
                         </div>
 
                         <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                             <h2>Previsão de Churn de Clientes</h2>
-                            <p>Pipeline completo de classificação binária para prever a evasão de clientes (churn) em
-                                uma empresa de telecomunicações. O projeto abrange ingestão de dados, análise
-                                exploratória, engenharia de features, treinamento do modelo, otimização de
-                                hiperparâmetros e explicabilidade com valores SHAP.</p>
-                            <p>O modelo final em Gradient Boosting atingiu um <strong>AUC-ROC de 87%</strong> no
-                                conjunto de teste final, permitindo à empresa atuar proativamente na retenção dos
-                                clientes mais propensos a cancelar seus planos.</p>
+                            <p>Este projeto apresenta um pipeline completo de Machine Learning para classificação
+                                binária, desenvolvido para prever a evasão de clientes (churn) em uma empresa do setor
+                                de telecomunicações. O trabalho inclui todo o ciclo de desenvolvimento de um modelo
+                                preditivo: ingestão e limpeza de dados, análise exploratória, engenharia de features,
+                                treinamento de modelos, otimização de hiperparâmetros e análise de interpretabilidade
+                                utilizando SHAP
+                                .</p>
+                            <p>O modelo final baseado em LightGBM alcançou um AUC-ROC de 0.987 no conjunto de
+                                teste, demonstrando alta capacidade de discriminação entre clientes propensos a cancelar
+                                e clientes que tendem a permanecer. A análise de risco permitiu identificar que os 20%
+                                clientes com maior probabilidade de churn concentram aproximadamente 74.9% das
+                                cancelamentos, possibilitando a criação de campanhas de retenção altamente direcionadas.
+
+                                Com essa abordagem, a empresa pode atuar de forma proativa na retenção de clientes,
+                                priorizando recursos nos clientes com maior risco de evasão e potencializando o retorno
+                                das estratégias de fidelização.</p>
                             <h4 class="mt-3">Principais Destaques</h4>
                             <ul>
                                 <li><i class="bi bi-check-circle text-primary"></i> Tratamento de dados desbalanceados
-                                    utilizando SMOTE e ajuste do limiar (threshold)</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Explicações individuais via gráficos
-                                    SHAP</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Modelo exportado usando MLflow para
-                                    documentar experimentos</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Dashboard de resultados hospedado
-                                    via Streamlit</li>
+                                    utilizando técnicas de reamostragem e otimização de threshold de decisão</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Implementação de explicabilidade do
+                                    modelo com SHAP, permitindo identificar os fatores que mais influenciam o churn</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Registro e rastreamento de
+                                    experimentos utilizando MLflow, garantindo reprodutibilidade do modelo</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Desenvolvimento de uma aplicação
+                                    interativa em Streamlit para visualização dos resultados e interpretação do modelo
+                                </li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Construção de um pipeline completo
+                                    de Machine Learning, desde o pré-processamento até a avaliação final do modelo</li>
                             </ul>
                         </div>
                     </div>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Dashboard de Analytics de Vendas | Felipe Sembay</title>
-    <meta content="Projeto de BI: Dashboard Analítico de Vendas feito no Power BI." name="description">
+    <title>Dashboard de Analytics de Marketing | Felipe Sembay</title>
+    <meta content="Projeto de BI: Dashboard Analítico de Marketing feito no Power BI." name="description">
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -81,19 +81,25 @@
             opacity: 0.5;
             margin: 0;
         }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
     </style>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-JK8WBCFGK1', {
-      'send_page_view': true
-    });
-  </script>
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
 </head>
 
 <body class="portfolio-details-page">
@@ -105,8 +111,8 @@
             <h1 class="sitename">Felipe Sembay</h1>
         </a>
         <div class="lang-switcher">
-            <a href="portfolio-sales-dashboard.html"><span class="flag">🇺🇸</span> EN</a>
-            <a href="portfolio-sales-dashboard-pt.html"><span class="flag">🇧🇷</span> PT</a>
+            <a href="portfolio-marketing-dashboard.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-marketing-dashboard-pt.html"><span class="flag">🇧🇷</span> PT</a>
         </div>
         <div class="social-links text-center">
             <a href="https://github.com/felipesembay" class="github" target="_blank"><i class="bi bi-github"></i></a>
@@ -129,12 +135,12 @@
     <main class="main">
         <div class="page-title dark-background">
             <div class="container d-lg-flex justify-content-between align-items-center">
-                <h1 class="mb-2 mb-lg-0">Dashboard de Analytics de Vendas</h1>
+                <h1 class="mb-2 mb-lg-0">Dashboard de Analytics de Marketing</h1>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index-pt.html">Início</a></li>
                         <li><a href="index-pt.html#portfolio">Portfólio</a></li>
-                        <li class="current">Vendas (BI)</li>
+                        <li class="current">Marketing (BI)</li>
                     </ol>
                 </nav>
             </div>
@@ -150,19 +156,24 @@
               </script>
                             <div class="swiper-wrapper align-items-center">
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-bar-chart-line"></i>
-                                        <p>Adicione imagens em assets/img/projects/sales-dashboard/</p>
-                                    </div>
+                                    <img src="assets/img/projects/marketing-dashboard/marketing1.png"
+                                        alt="Marketing Dashboard 1">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-graph-up-arrow"></i>
-                                        <p>Tendência de Receita Mensal</p>
-                                    </div>
+                                    <img src="assets/img/projects/marketing-dashboard/marketing2.png"
+                                        alt="Marketing Dashboard 2">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-map"></i>
-                                        <p>Mapa de Calor Regional</p>
-                                    </div>
+                                    <img src="assets/img/projects/marketing-dashboard/marketing3.png"
+                                        alt="Marketing Dashboard 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/marketing-dashboard/marketing4.png"
+                                        alt="Marketing Dashboard 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/marketing-dashboard/marketing5.png"
+                                        alt="Marketing Dashboard 5">
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
@@ -174,22 +185,25 @@
                             <h3>Informações do Projeto</h3>
                             <ul>
                                 <li><strong>Categoria:</strong> Analytics / BI</li>
-                                <li><strong>Tipo:</strong> Dashboard em Power BI</li>
+                                <li><strong>Tipo:</strong> Dashboard em Data Studio / Looker Studio</li>
                                 <li><strong>Status:</strong> Concluído</li>
                                 <li><strong>GitHub:</strong> <a href="https://github.com/felipesembay"
                                         target="_blank">Ver Repositório →</a></li>
+                                <li><strong>Dashboard:</strong> <a
+                                        href="https://lookerstudio.google.com/reporting/cc13b83d-91da-48b8-b9f3-99b3de7ceef5"
+                                        target="_blank">Ver Dashboard →</a></li>
                             </ul>
                             <div class="mt-3">
                                 <strong>Tecnologias:</strong><br>
-                                <span class="tech-badge">Power BI</span>
-                                <span class="tech-badge">SQL</span>
-                                <span class="tech-badge">DAX</span>
+                                <span class="tech-badge">Looker Studio</span>
+                                <span class="tech-badge">Google Sheets</span>
                                 <span class="tech-badge">Python</span>
-                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Marketing Analytics</span>
                             </div>
                         </div>
                         <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-                            <h2>Dashboard de Analytics de Vendas</h2>
+                            <h2>Dashboard de Analytics de Marketing</h2>
                             <p>Dashboard interativo criado no Power BI, integrando dados de múltiplas fontes (ERP e
                                 E-commerce) para fornecer aos gerentes uma visão em tempo real da performance de vendas
                                 em todas as regiões, filiais e categorias de produtos.</p>
@@ -238,7 +252,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/analytics.js"></script>
 </body>
 
 </html>

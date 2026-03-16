@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Sales Analytics Dashboard | Felipe Sembay</title>
+    <title>Marketing Analytics Dashboard | Felipe Sembay</title>
     <meta content="BI project: Sales Analytics Dashboard built in Power BI with SQL data pipelines for a retail chain."
         name="description">
     <link href="assets/img/favicon.png" rel="icon">
@@ -82,19 +82,25 @@
             opacity: 0.5;
             margin: 0;
         }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
     </style>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-JK8WBCFGK1', {
-      'send_page_view': true
-    });
-  </script>
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
 </head>
 
 <body class="portfolio-details-page">
@@ -106,8 +112,8 @@
             <h1 class="sitename">Felipe Sembay</h1>
         </a>
         <div class="lang-switcher">
-            <a href="portfolio-sales-dashboard.html"><span class="flag">🇺🇸</span> EN</a>
-            <a href="portfolio-sales-dashboard-pt.html"><span class="flag">🇧🇷</span> PT</a>
+            <a href="portfolio-marketing-dashboard.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-marketing-dashboard-pt.html"><span class="flag">🇧🇷</span> PT</a>
         </div>
         <div class="social-links text-center">
             <a href="https://github.com/felipesembay" class="github" target="_blank"><i class="bi bi-github"></i></a>
@@ -130,12 +136,12 @@
     <main class="main">
         <div class="page-title dark-background">
             <div class="container d-lg-flex justify-content-between align-items-center">
-                <h1 class="mb-2 mb-lg-0">Sales Analytics Dashboard</h1>
+                <h1 class="mb-2 mb-lg-0">Marketing Analytics Dashboard</h1>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#portfolio">Portfolio</a></li>
-                        <li class="current">Sales Analytics</li>
+                        <li class="current">Marketing Analytics</li>
                     </ol>
                 </nav>
             </div>
@@ -150,21 +156,25 @@
                 { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
               </script>
                             <div class="swiper-wrapper align-items-center">
-                                <!-- ADD YOUR IMAGES: assets/img/projects/sales-dashboard/ -->
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-bar-chart-line"></i>
-                                        <p>Add screenshots to assets/img/projects/sales-dashboard/</p>
-                                    </div>
+                                    <img src="assets/img/projects/marketing-dashboard/marketing1.png"
+                                        alt="Marketing Dashboard 1">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-graph-up-arrow"></i>
-                                        <p>Monthly Revenue Trend</p>
-                                    </div>
+                                    <img src="assets/img/projects/marketing-dashboard/marketing2.png"
+                                        alt="Marketing Dashboard 2">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-map"></i>
-                                        <p>Regional Heatmap</p>
-                                    </div>
+                                    <img src="assets/img/projects/marketing-dashboard/marketing3.png"
+                                        alt="Marketing Dashboard 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/marketing-dashboard/marketing4.png"
+                                        alt="Marketing Dashboard 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/marketing-dashboard/marketing5.png"
+                                        alt="Marketing Dashboard 5">
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
@@ -176,41 +186,45 @@
                             <h3>Project Information</h3>
                             <ul>
                                 <li><strong>Category:</strong> Analytics / BI</li>
-                                <li><strong>Type:</strong> Dashboard</li>
+                                <li><strong>Type:</strong> Data Studio / Looker Studio Dashboard</li>
                                 <li><strong>Status:</strong> Completed</li>
                                 <li><strong>GitHub:</strong> <a href="https://github.com/felipesembay"
                                         target="_blank">View Repository →</a></li>
+                                <li><strong>Dashboard:</strong> <a
+                                        href="https://lookerstudio.google.com/reporting/cc13b83d-91da-48b8-b9f3-99b3de7ceef5"
+                                        target="_blank">View Dashboard →</a></li>
                             </ul>
                             <div class="mt-3">
                                 <strong>Technologies:</strong><br>
-                                <span class="tech-badge">Power BI</span>
-                                <span class="tech-badge">SQL</span>
-                                <span class="tech-badge">DAX</span>
+                                <span class="tech-badge">Looker Studio</span>
+                                <span class="tech-badge">Google Sheets</span>
                                 <span class="tech-badge">Python</span>
-                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Marketing Analytics</span>
                             </div>
                         </div>
-                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-                            <h2>Sales Analytics Dashboard</h2>
-                            <p>Interactive Power BI dashboard integrating data from multiple sources (ERP, CRM and
-                                e-commerce) to give sales managers a live view of performance across regions, product
-                                categories and time periods.</p>
-                            <p>An automated SQL pipeline refreshes the data daily, ensuring decision-makers always work
-                                with up-to-date KPIs without manual exports.</p>
-                            <h4 class="mt-3">Key Highlights</h4>
-                            <ul>
-                                <li><i class="bi bi-check-circle text-primary"></i> Real-time KPI cards: revenue,
-                                    margin, units sold</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Drill-through by region, product and
-                                    salesperson</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Automated daily ETL with Python +
-                                    SQL</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Row-level security for role-based
-                                    access</li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Marketing Analytics Dashboard</h2>
+                        <p>Interactive Power BI dashboard integrating data from multiple sources (ERP, CRM and
+                            e-commerce) to give sales managers a live view of performance across regions, product
+                            categories and time periods.</p>
+                        <p>An automated SQL pipeline refreshes the data daily, ensuring decision-makers always work
+                            with up-to-date KPIs without manual exports.</p>
+                        <h4 class="mt-3">Key Highlights</h4>
+                        <ul>
+                            <li><i class="bi bi-check-circle text-primary"></i> Real-time KPI cards: revenue,
+                                margin, units sold</li>
+                            <li><i class="bi bi-check-circle text-primary"></i> Drill-through by region, product and
+                                salesperson</li>
+                            <li><i class="bi bi-check-circle text-primary"></i> Automated daily ETL with Python +
+                                SQL</li>
+                            <li><i class="bi bi-check-circle text-primary"></i> Row-level security for role-based
+                                access</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     </main>
@@ -239,7 +253,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/analytics.js"></script>
 </body>
 
 </html>

@@ -4,23 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Financial Risk Analysis | Felipe Sembay</title>
-    <meta
-        content="Data science project: Credit scoring model using logistic regression and SHAP for financial risk assessment."
+    <title>Crypto Portfolio Optimization | Felipe Sembay</title>
+    <meta content="Machine learning project: Customer Churn Prediction using Gradient Boosting with 87% AUC-ROC."
         name="description">
+    <meta content="churn prediction, machine learning, XGBoost, Python, Felipe Sembay" name="keywords">
+
+    <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Vendor CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
     <link href="assets/css/main.css" rel="stylesheet">
+
     <style>
         .lang-switcher {
             margin-top: 12px;
@@ -62,6 +71,16 @@
             margin: 3px 2px;
         }
 
+        .portfolio-info ul li strong {
+            min-width: 90px;
+            display: inline-block;
+        }
+
+        .portfolio-info a {
+            color: var(--accent-color, #0563bb);
+            font-weight: 600;
+        }
+
         .placeholder-slide {
             background: #1a1f2e;
             display: flex;
@@ -83,38 +102,52 @@
             opacity: 0.5;
             margin: 0;
         }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
     </style>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-JK8WBCFGK1', {
-      'send_page_view': true
-    });
-  </script>
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
 </head>
 
 <body class="portfolio-details-page">
+
     <header id="header" class="header dark-background d-flex flex-column">
         <i class="header-toggle d-xl-none bi bi-list"></i>
-        <div class="profile-img"><img src="assets/img/my-profile-img.png" alt="Felipe Sembay"
-                class="img-fluid rounded-circle"></div>
+
+        <div class="profile-img">
+            <img src="assets/img/my-profile-img.png" alt="Felipe Sembay" class="img-fluid rounded-circle">
+        </div>
+
         <a href="index.html" class="logo d-flex align-items-center justify-content-center">
             <h1 class="sitename">Felipe Sembay</h1>
         </a>
+
         <div class="lang-switcher">
             <a href="portfolio-financial-risk.html"><span class="flag">🇺🇸</span> EN</a>
             <a href="portfolio-financial-risk-pt.html"><span class="flag">🇧🇷</span> PT</a>
         </div>
+
         <div class="social-links text-center">
-            <a href="https://github.com/felipesembay" class="github" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://linkedin.com/in/felipesembay" class="linkedin" target="_blank"><i
+            <a href="https://github.com/felipesembay" class="github" title="GitHub" target="_blank"><i
+                    class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/felipesembay" class="linkedin" title="LinkedIn" target="_blank"><i
                     class="bi bi-linkedin"></i></a>
         </div>
+
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="index.html#hero"><i class="bi bi-house navicon"></i> Home</a></li>
@@ -129,93 +162,144 @@
     </header>
 
     <main class="main">
+
+        <!-- Page Title -->
         <div class="page-title dark-background">
             <div class="container d-lg-flex justify-content-between align-items-center">
-                <h1 class="mb-2 mb-lg-0">Financial Risk Analysis</h1>
+                <h1 class="mb-2 mb-lg-0">Crypto Portfolio Optimization</h1>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#portfolio">Portfolio</a></li>
-                        <li class="current">Financial Risk</li>
+                        <li class="current">Crypto Portfolio Optimization</li>
                     </ol>
                 </nav>
             </div>
         </div>
 
+        <!-- Portfolio Details Section -->
         <section id="portfolio-details" class="portfolio-details section">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gy-4">
+
+                    <!-- Image Slider -->
                     <div class="col-lg-8">
                         <div class="portfolio-details-slider swiper init-swiper">
                             <script type="application/json" class="swiper-config">
                 { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
               </script>
+
                             <div class="swiper-wrapper align-items-center">
-                                <!-- ADD YOUR IMAGES: assets/img/projects/financial-risk/ -->
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-shield-check"></i>
-                                        <p>Add screenshots to assets/img/projects/financial-risk/</p>
-                                    </div>
+                                    <img src="assets/img/projects/financial-risk/1.png" alt="Churn Project Image 1">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-graph-down"></i>
-                                        <p>SHAP Beeswarm Plot</p>
-                                    </div>
+                                    <img src="assets/img/projects/financial-risk/1.png" alt="Churn Project Image 2">
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="placeholder-slide"><i class="bi bi-pie-chart"></i>
-                                        <p>Risk Tier Breakdown</p>
-                                    </div>
+                                    <img src="assets/img/projects/financial-risk/1.png" alt="Churn Project Image 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/financial-risk/1.png" alt="Churn Project Image 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/financial-risk/1.png" alt="Churn Project Image 5">
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
 
+                    <!-- Project Info -->
                     <div class="col-lg-4">
                         <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
                             <h3>Project Information</h3>
                             <ul>
-                                <li><strong>Category:</strong> Analytics / ML</li>
-                                <li><strong>Type:</strong> Credit Scoring</li>
+                                <li><strong>Category:</strong> Analytics / Finance</li>
+                                <li><strong>Type:</strong> Portfolio Optimization</li>
                                 <li><strong>Status:</strong> Completed</li>
-                                <li><strong>GitHub:</strong> <a href="https://github.com/felipesembay"
+                                <li><strong>GitHub:</strong> <a
+                                        href="https://github.com/felipesembay"
                                         target="_blank">View Repository →</a></li>
                             </ul>
                             <div class="mt-3">
                                 <strong>Technologies:</strong><br>
                                 <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Scikit-learn</span>
-                                <span class="tech-badge">SHAP</span>
-                                <span class="tech-badge">Logistic Regression</span>
-                                <span class="tech-badge">Pandas</span>
-                                <span class="tech-badge">Matplotlib</span>
-                            </div>
+                                <span class="tech-badge">yfinance</span>
+                                <span class="tech-badge">Monte Carlo</span>
+                                <span class="tech-badge">Markowitz</span>
+                                <span class="tech-badge">PuLP</span>
+                                <span class="tech-badge">Plotly</span>
+</div>
                         </div>
+
                         <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-                            <h2>Financial Risk Analysis</h2>
-                            <p>Credit scoring model built to classify loan applicants into risk tiers (low / medium /
-                                high) using logistic regression with L2 regularisation. The full pipeline covers data
-                                wrangling, feature engineering, class imbalance treatment and model explainability with
-                                SHAP.</p>
-                            <p>Business stakeholders receive clear explanations for each individual decision, enabling
-                                regulatory compliance and fair lending practices.</p>
-                            <h4 class="mt-3">Key Highlights</h4>
-                            <ul>
-                                <li><i class="bi bi-check-circle text-primary"></i> 86% AUC-ROC on hold-out test set
-                                </li>
-                                <li><i class="bi bi-check-circle text-primary"></i> SHAP beeswarm and waterfall plots
-                                    for XAI</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Threshold optimisation for business
-                                    cost function</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Automated model monitoring for data
-                                    drift</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<h2>Crypto Portfolio Optimization</h2>
+<p>In this project, we built a complete portfolio optimization system focused on cryptocurrencies, aiming to maximize risk-adjusted returns.</p>
+<h4 class="mt-3">Modules Covered</h4>
+<ul>
+    <li><i class="bi bi-check-circle text-primary"></i> Data gathering and preprocessing via <code>yfinance</code>.</li>
+    <li><i class="bi bi-check-circle text-primary"></i> Monte Carlo Simulation to plot the Efficient Frontier.</li>
+    <li><i class="bi bi-check-circle text-primary"></i> Markowitz Optimization to find the Maximum Sharpe and Minimum Volatility portfolios.</li>
+    <li><i class="bi bi-check-circle text-primary"></i> Comprehensive risk metrics: Sharpe, Alpha, Beta, VaR, CVaR, and Maximum Drawdown.</li>
+    <li><i class="bi bi-check-circle text-primary"></i> Smart Rebalancing using Linear Programming (PuLP).</li>
+    <li><i class="bi bi-check-circle text-primary"></i> High-quality interactive visualizations with Plotly.</li>
+</ul>
+<h4 class="mt-4">Strategy Results</h4>
+<div class="table-responsive mt-3">
+    <table class="table table-bordered table-hover text-center align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Strategy</th>
+                <th>Return YoY</th>
+                <th>Volatility</th>
+                <th>Sharpe</th>
+                <th>Max Drawdown</th>
+                <th>Final Capital</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Equal-Weight</strong></td>
+                <td>53.18%</td>
+                <td>73.87%</td>
+                <td>0.652</td>
+                <td>-60.06%</td>
+                <td>USD 14,784</td>
+            </tr>
+            <tr>
+                <td><strong>Min. Volatility</strong></td>
+                <td>59.11%</td>
+                <td>58.19%</td>
+                <td>0.930</td>
+                <td>-50.38%</td>
+                <td>USD 18,912</td>
+            </tr>
+            <tr>
+                <td><strong>Max. Sharpe</strong></td>
+                <td>88.20%</td>
+                <td>69.80%</td>
+                <td>1.192</td>
+                <td>-54.83%</td>
+                <td>USD 26,239</td>
+            </tr>
+            <tr>
+                <td><strong>PuLP Rebalanced</strong></td>
+                <td>81.77%</td>
+                <td>67.93%</td>
+                <td>1.130</td>
+                <td>-53.55%</td>
+                <td>USD 24,307</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
     </main>
 
     <footer id="footer" class="footer position-relative light-background">
@@ -231,6 +315,7 @@
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
     <div id="preloader"></div>
+
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
@@ -242,7 +327,8 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/analytics.js"></script>
+
+    <script src="assets/js/analytics.js"></script>
 </body>
 
 </html>

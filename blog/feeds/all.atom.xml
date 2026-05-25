@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Felipe Sembay | Blog</title><link href="https://felipesembay.github.io/blog/" rel="alternate"/><link href="https://felipesembay.github.io/blog/feeds/all.atom.xml" rel="self"/><id>https://felipesembay.github.io/blog/</id><updated>2026-05-05T00:00:00-03:00</updated><entry><title>Bem-vindo ao meu blog de Data Science</title><link href="https://felipesembay.github.io/blog/bem-vindo-ao-blog.html" rel="alternate"/><published>2026-05-05T00:00:00-03:00</published><updated>2026-05-05T00:00:00-03:00</updated><author><name>Felipe Sembay</name></author><id>tag:felipesembay.github.io,2026-05-05:/blog/bem-vindo-ao-blog.html</id><summary type="html">&lt;p&gt;Primeiro post do blog — sobre o que vou escrever aqui e por que decidi criar um espaço próprio para compartilhar projetos e aprendizados.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Bem-vindo!&lt;/h1&gt;
+&lt;p&gt;Esse blog é um espaço para compartilhar projetos, aprendizados e experimentos com &lt;strong&gt;Data Science&lt;/strong&gt;, &lt;strong&gt;Machine Learning&lt;/strong&gt; e &lt;strong&gt;Python&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;O que você vai encontrar aqui&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tutoriais práticos com código Python&lt;/li&gt;
+&lt;li&gt;Análises de dados e visualizações&lt;/li&gt;
+&lt;li&gt;Projetos de Machine Learning do zero ao deploy&lt;/li&gt;
+&lt;li&gt;Dicas de carreira e mercado de dados&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Exemplo de código&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;pandas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;plt&lt;/span&gt;
+
+&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dados.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;coluna&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hist&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Distribuição dos dados&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Próximos posts&lt;/h2&gt;
+&lt;p&gt;Estou planejando escrever sobre:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Como estruturar um projeto de ML do zero&lt;/li&gt;
+&lt;li&gt;Feature engineering com Pandas&lt;/li&gt;
+&lt;li&gt;Deploy de modelos com Streamlit&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Até o próximo post!&lt;/p&gt;</content><category term="Data Science"/><category term="python"/><category term="machine-learning"/><category term="introducao"/></entry><entry><title>Welcome to my Data Science Blog</title><link href="https://felipesembay.github.io/blog/bem-vindo-ao-blog-en.html" rel="alternate"/><published>2026-05-05T00:00:00-03:00</published><updated>2026-05-05T00:00:00-03:00</updated><author><name>Felipe Sembay</name></author><id>tag:felipesembay.github.io,2026-05-05:/blog/bem-vindo-ao-blog-en.html</id><summary type="html">&lt;p&gt;First blog post — what I'll be writing about and why I decided to create a space to share projects and learnings.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Welcome!&lt;/h1&gt;
+&lt;p&gt;This blog is a space to share projects, learnings, and experiments with &lt;strong&gt;Data Science&lt;/strong&gt;, &lt;strong&gt;Machine Learning&lt;/strong&gt;, and &lt;strong&gt;Python&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;What you'll find here&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Practical tutorials with Python code&lt;/li&gt;
+&lt;li&gt;Data analysis and visualizations&lt;/li&gt;
+&lt;li&gt;Machine Learning projects from scratch to deployment&lt;/li&gt;
+&lt;li&gt;Career tips and insights from the data market&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Code example&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;pandas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;plt&lt;/span&gt;
+
+&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;column&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hist&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Data Distribution&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Upcoming posts&lt;/h2&gt;
+&lt;p&gt;Planning to write about:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How to structure an ML project from scratch&lt;/li&gt;
+&lt;li&gt;Feature engineering with Pandas&lt;/li&gt;
+&lt;li&gt;Model deployment with Streamlit&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;See you in the next post!&lt;/p&gt;</content><category term="Data Science"/><category term="python"/><category term="machine-learning"/><category term="introduction"/></entry></feed>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to my Data Science Blog | Felipe Sembay | Blog</title>
+
+  <!-- Fonts (idêntico ao iPortfolio) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Highlight.js para syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" rel="stylesheet">
+
+  <!-- Tema customizado -->
+  <link href="/theme/css/style.css" rel="stylesheet">
+
+  <meta name="description" content="First blog post — what I'll be writing about and why I decided to create a space to share projects and learnings.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RH8SQZT43"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2RH8SQZT43');
+  </script>
+</head>
+<body>
+
+<!-- ===== SIDEBAR (espelho do iPortfolio) ===== -->
+<header id="sidebar" class="sidebar dark-background d-flex flex-column">
+  <i class="sidebar-toggle d-xl-none bi bi-list"></i>
+
+  <div class="profile-img text-center">
+    <img src="/theme/img/profile.png" alt="Felipe Sembay" class="img-fluid rounded-circle">
+  </div>
+
+  <a href="/" class="logo d-flex align-items-center justify-content-center">
+    <h1 class="sitename">Felipe Sembay</h1>
+  </a>
+
+  <p class="sidebar-subtitle text-center">Data Scientist &amp; ML Engineer</p>
+
+  <!-- Language switcher (igual ao iPortfolio) -->
+  <div class="lang-switcher text-center">
+    <a href="/pages/sobre.html" class="lang-btn" data-lang="pt" title="Português">
+      <span>🇧🇷</span> PT
+    </a>
+    <a href="/pages/about.html" class="lang-btn" data-lang="en" title="English">
+      <span>🇺🇸</span> EN
+    </a>
+  </div>
+
+  <div class="social-links text-center">
+    <a href="https://github.com/felipesembay" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://linkedin.com/in/felipesembay" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+  </div>
+
+  <nav class="navmenu">
+    <ul>
+      <li><a href="/" >
+        <i class="bi bi-journal-text navicon"></i> Blog
+      </a></li>
+      <li><a href="/pages/about.html" >
+        <i class="bi bi-person navicon"></i> About
+      </a></li>
+      <li class="dropdown">
+        <a href="#"><i class="bi bi-grid navicon"></i> Categorias <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="/category/data-science.html">Data Science <span class="badge-count">1</span></a></li>
+        </ul>
+      </li>
+      <li><a href="https://felipesembay.github.io/" target="_blank">
+        <i class="bi bi-person-badge navicon"></i> Portfólio
+      </a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+<main class="main">
+  <div class="container-fluid px-4 py-5">
+<article class="single-post">
+
+  <header class="post-header">
+    <div class="post-meta-top">
+      <a href="/category/data-science.html" class="post-category">Data Science</a>
+      <span class="post-date"><i class="bi bi-calendar3"></i> 05 de maio de 2026</span>
+      <span class="post-author"><i class="bi bi-person"></i> Felipe Sembay</span>
+    </div>
+    <h1 class="post-headline">Welcome to my Data Science Blog</h1>
+    <div class="post-tags mt-2">
+      <a href="/tag/python.html" class="tag">#python</a>
+      <a href="/tag/machine-learning.html" class="tag">#machine-learning</a>
+      <a href="/tag/introduction.html" class="tag">#introduction</a>
+    </div>
+    <hr class="post-divider">
+  </header>
+
+  <div class="post-body">
+    <h1>Welcome!</h1>
+<p>This blog is a space to share projects, learnings, and experiments with <strong>Data Science</strong>, <strong>Machine Learning</strong>, and <strong>Python</strong>.</p>
+<h2>What you'll find here</h2>
+<ul>
+<li>Practical tutorials with Python code</li>
+<li>Data analysis and visualizations</li>
+<li>Machine Learning projects from scratch to deployment</li>
+<li>Career tips and insights from the data market</li>
+</ul>
+<h2>Code example</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;column&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Data Distribution&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<h2>Upcoming posts</h2>
+<p>Planning to write about:</p>
+<ol>
+<li>How to structure an ML project from scratch</li>
+<li>Feature engineering with Pandas</li>
+<li>Model deployment with Streamlit</li>
+</ol>
+<p>See you in the next post!</p>
+  </div>
+
+  <hr class="post-divider mt-5">
+
+  <!-- Navegação entre posts -->
+  <nav class="post-nav d-flex justify-content-between">
+<span></span>
+  </nav>
+
+  <!-- Voltar ao blog -->
+  <div class="text-center mt-4">
+    <a href="/" class="btn-back">
+      <i class="bi bi-grid-3x3-gap"></i> Todos os posts
+    </a>
+  </div>
+
+  <!-- Disqus -->
+
+</article>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer" class="footer dark-background">
+  <div class="container text-center py-3">
+    <small>
+      &copy; 2026 <strong>Felipe Sembay</strong> &mdash;
+      <a href="https://felipesembay.github.io/" target="_blank">Portfólio</a>
+    </small>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+
+  // Lang switcher — marca botão ativo pela URL atual
+  (function() {
+    const path = window.location.pathname;
+    const isEN = path.includes('/about');
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      const isActive = (isEN && btn.dataset.lang === 'en') || (!isEN && btn.dataset.lang === 'pt');
+      if (isActive) btn.classList.add('active-lang');
+    });
+  })();
+
+  // Sidebar toggle (mobile)
+  const toggle = document.querySelector('.sidebar-toggle');
+  const sidebar = document.getElementById('sidebar');
+  if (toggle) {
+    toggle.addEventListener('click', () => sidebar.classList.toggle('sidebar-show'));
+  }
+
+  // Dropdown no nav
+  document.querySelectorAll('.navmenu .dropdown > a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      a.parentElement.classList.toggle('active');
+    });
+  });
+</script>
+</body>
+</html>

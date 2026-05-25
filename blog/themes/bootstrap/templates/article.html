@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<article class="single-post">
+
+  <header class="post-header">
+    <div class="post-meta-top">
+      <a href="{{ SITEURL }}/{{ article.category.url }}" class="post-category">{{ article.category }}</a>
+      <span class="post-date"><i class="bi bi-calendar3"></i> {{ article.locale_date }}</span>
+      <span class="post-author"><i class="bi bi-person"></i> {{ article.author }}</span>
+    </div>
+    <h1 class="post-headline">{{ article.title }}</h1>
+    {% if article.tags %}
+    <div class="post-tags mt-2">
+      {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <hr class="post-divider">
+  </header>
+
+  <div class="post-body">
+    {{ article.content }}
+  </div>
+
+  <hr class="post-divider mt-5">
+
+  <!-- Navegação entre posts -->
+  <nav class="post-nav d-flex justify-content-between">
+    {% if article.prev_article %}
+    <a href="{{ SITEURL }}/{{ article.prev_article.url }}" class="post-nav-link prev">
+      <span class="nav-label"><i class="bi bi-arrow-left"></i> Anterior</span>
+      <span class="nav-title">{{ article.prev_article.title }}</span>
+    </a>
+    {% else %}<span></span>{% endif %}
+
+    {% if article.next_article %}
+    <a href="{{ SITEURL }}/{{ article.next_article.url }}" class="post-nav-link next text-end">
+      <span class="nav-label">Próximo <i class="bi bi-arrow-right"></i></span>
+      <span class="nav-title">{{ article.next_article.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+
+  <!-- Voltar ao blog -->
+  <div class="text-center mt-4">
+    <a href="{{ SITEURL }}/" class="btn-back">
+      <i class="bi bi-grid-3x3-gap"></i> Todos os posts
+    </a>
+  </div>
+
+  <!-- Disqus -->
+  {% if DISQUS_SITENAME %}
+  <section id="comments" class="mt-5">
+    <h4>Comentários</h4>
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = "{{ SITEURL }}/{{ article.url }}";
+        this.page.identifier = "{{ article.slug }}";
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+  </section>
+  {% endif %}
+
+</article>
+{% endblock %}

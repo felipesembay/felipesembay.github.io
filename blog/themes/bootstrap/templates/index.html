@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}Blog | {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="page-title">
+  <h1>Blog</h1>
+  <p>Artigos sobre Data Science, Machine Learning e Python</p>
+</div>
+
+{# ── Seção Português ─────────────────────────────────────────── #}
+<div id="section-pt" class="lang-section mb-5" style="display:none">
+  <div class="row gy-4">
+    {% for article in articles_page.object_list | selectattr('lang', 'equalto', 'pt') | list %}
+    <div class="col-12">
+      <article class="post-card">
+        <div class="post-card-meta">
+          <a href="{{ SITEURL }}/{{ article.category.url }}" class="post-category">{{ article.category }}</a>
+          <span class="post-date"><i class="bi bi-calendar3"></i> {{ article.locale_date }}</span>
+        </div>
+        <h2 class="post-title">
+          <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+        </h2>
+        <p class="post-summary">{{ article.summary | striptags | truncate(220) }}</p>
+        <div class="post-footer">
+          <div class="post-tags">
+            {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">#{{ tag }}</a>
+            {% endfor %}
+          </div>
+          <a href="{{ SITEURL }}/{{ article.url }}" class="read-more">
+            Ler artigo <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{# ── Seção English ───────────────────────────────────────────── #}
+{% set en_articles = [] %}
+{% for article in articles %}
+  {% for tr in article.translations %}
+    {% if tr.lang == 'en' %}{% set _ = en_articles.append(tr) %}{% endif %}
+  {% endfor %}
+{% endfor %}
+
+<div id="section-en" class="lang-section" style="display:none">
+  <div class="row gy-4">
+    {% for article in en_articles | sort(attribute='date', reverse=True) %}
+    <div class="col-12">
+      <article class="post-card">
+        <div class="post-card-meta">
+          <a href="{{ SITEURL }}/{{ article.category.url }}" class="post-category">{{ article.category }}</a>
+          <span class="post-date"><i class="bi bi-calendar3"></i> {{ article.locale_date }}</span>
+        </div>
+        <h2 class="post-title">
+          <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+        </h2>
+        <p class="post-summary">{{ article.summary | striptags | truncate(220) }}</p>
+        <div class="post-footer">
+          <div class="post-tags">
+            {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">#{{ tag }}</a>
+            {% endfor %}
+          </div>
+          <a href="{{ SITEURL }}/{{ article.url }}" class="read-more">
+            Read article <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% if articles_page.has_other_pages() %}
+<nav class="mt-5">
+  <ul class="pagination justify-content-center">
+    {% if articles_page.has_previous() %}
+    <li class="page-item">
+      <a class="page-link" href="{{ SITEURL }}/{{ articles_previous_page.save_as }}">&larr; Anterior / Previous</a>
+    </li>
+    {% endif %}
+    {% if articles_page.has_next() %}
+    <li class="page-item">
+      <a class="page-link" href="{{ SITEURL }}/{{ articles_next_page.save_as }}">Próximo / Next &rarr;</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+
+<script>
+(function () {
+  // Detecta idioma: localStorage → 'pt' default
+  var saved = localStorage.getItem('blog-lang') || 'pt';
+
+  function activateLang(lang) {
+    // Seções
+    document.getElementById('section-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+    document.getElementById('section-en').style.display = (lang === 'en') ? 'block' : 'none';
+
+    // Botões da sidebar — marca ativo
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active-lang', btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem('blog-lang', lang);
+  }
+
+  // Intercepta cliques nos botões de idioma APENAS nesta página
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      activateLang(btn.dataset.lang);
+    });
+  });
+
+  // Inicializa
+  activateLang(saved);
+})();
+</script>
+{% endblock %}

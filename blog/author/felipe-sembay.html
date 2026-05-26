@@ -66,18 +66,28 @@
       <li><a href="https://felipesembay.github.io/blog/" class="active">
         <i class="bi bi-journal-text navicon"></i> Blog
       </a></li>
-      <li><a href="https://felipesembay.github.io/blog/pages/sobre.html" >
-        <i class="bi bi-person navicon"></i> Sobre
-      </a></li>
-      <li class="dropdown">
-        <a href="#"><i class="bi bi-grid navicon"></i> Categorias <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-          <li><a href="https://felipesembay.github.io/blog/category/data-science.html">Data Science <span class="badge-count">1</span></a></li>
-        </ul>
-      </li>
-      <li><a href="https://felipesembay.github.io/" target="_blank">
-        <i class="bi bi-person-badge navicon"></i> Portfólio
-      </a></li>
+
+        <li class="nav-lang-item" data-nav-lang="pt">
+          <a href="https://felipesembay.github.io/blog/pages/sobre.html"><i class="bi bi-person navicon"></i> Sobre</a>
+        </li>
+        <li class="nav-lang-item" data-nav-lang="en" style="display:none">
+          <a href="https://felipesembay.github.io/blog/pages/about.html"><i class="bi bi-person navicon"></i> About</a>
+        </li>
+        <li class="nav-lang-item dropdown" data-nav-lang="pt">
+          <a href="#"><i class="bi bi-grid navicon"></i> Categorias <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul><li><a href="https://felipesembay.github.io/blog/category/data-science.html">Data Science <span class="badge-count">1</span></a></li></ul>
+        </li>
+        <li class="nav-lang-item dropdown" data-nav-lang="en" style="display:none">
+          <a href="#"><i class="bi bi-grid navicon"></i> Categories <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul><li><a href="https://felipesembay.github.io/blog/category/data-science.html">Data Science <span class="badge-count">1</span></a></li></ul>
+        </li>
+        <li class="nav-lang-item" data-nav-lang="pt">
+          <a href="https://felipesembay.github.io/" target="_blank"><i class="bi bi-person-badge navicon"></i> Portfólio</a>
+        </li>
+        <li class="nav-lang-item" data-nav-lang="en" style="display:none">
+          <a href="https://felipesembay.github.io/" target="_blank"><i class="bi bi-person-badge navicon"></i> Portfolio</a>
+        </li>
+
     </ul>
   </nav>
 </header>
@@ -152,11 +162,16 @@
   var saved = localStorage.getItem('blog-lang') || 'pt';
 
   function activateLang(lang) {
-    // Seções
+    // Seções de posts
     document.getElementById('section-pt').style.display = (lang === 'pt') ? 'block' : 'none';
     document.getElementById('section-en').style.display = (lang === 'en') ? 'block' : 'none';
 
-    // Botões da sidebar — marca ativo
+    // Itens do nav lateral
+    document.querySelectorAll('.nav-lang-item').forEach(function(el) {
+      el.style.display = (el.dataset.navLang === lang) ? '' : 'none';
+    });
+
+    // Botões de idioma — marca ativo
     document.querySelectorAll('.lang-btn').forEach(function(btn) {
       btn.classList.toggle('active-lang', btn.dataset.lang === lang);
     });

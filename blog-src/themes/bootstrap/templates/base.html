@@ -65,29 +65,59 @@
   </div>
 
   <nav class="navmenu">
+    {% set is_index = not (article is defined) and not (page is defined) %}
+    {% set current_lang = article.lang if article is defined else (page.lang if page is defined else DEFAULT_LANG) %}
     <ul>
-      <li><a href="{{ SITEURL }}/" {% if not article is defined and not page is defined %}class="active"{% endif %}>
+      <li><a href="{{ SITEURL }}/" {% if is_index %}class="active"{% endif %}>
         <i class="bi bi-journal-text navicon"></i> Blog
       </a></li>
-      {% set current_lang = article.lang if article is defined else (page.lang if page is defined else DEFAULT_LANG) %}
-      {% for p in pages if p.lang == current_lang %}
-      <li><a href="{{ SITEURL }}/{{ p.url }}" {% if page is defined and page.slug == p.slug %}class="active"{% endif %}>
-        <i class="bi bi-person navicon"></i> {{ p.title }}
-      </a></li>
-      {% endfor %}
-      {% if categories %}
-      <li class="dropdown">
-        <a href="#"><i class="bi bi-grid navicon"></i> Categorias <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-          {% for cat, arts in categories %}
-          <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }} <span class="badge-count">{{ arts | count }}</span></a></li>
-          {% endfor %}
-        </ul>
-      </li>
+
+      {% if is_index %}
+        {# Index: emite PT e EN — JS toggling controla visibilidade #}
+        {% for p in pages if p.lang == 'pt' %}
+        <li class="nav-lang-item" data-nav-lang="pt">
+          <a href="{{ SITEURL }}/{{ p.url }}"><i class="bi bi-person navicon"></i> {{ p.title }}</a>
+        </li>
+        {% endfor %}
+        {% for p in pages if p.lang == 'en' %}
+        <li class="nav-lang-item" data-nav-lang="en" style="display:none">
+          <a href="{{ SITEURL }}/{{ p.url }}"><i class="bi bi-person navicon"></i> {{ p.title }}</a>
+        </li>
+        {% endfor %}
+        {% if categories %}
+        <li class="nav-lang-item dropdown" data-nav-lang="pt">
+          <a href="#"><i class="bi bi-grid navicon"></i> Categorias <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>{% for cat, arts in categories %}<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }} <span class="badge-count">{{ arts | count }}</span></a></li>{% endfor %}</ul>
+        </li>
+        <li class="nav-lang-item dropdown" data-nav-lang="en" style="display:none">
+          <a href="#"><i class="bi bi-grid navicon"></i> Categories <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>{% for cat, arts in categories %}<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }} <span class="badge-count">{{ arts | count }}</span></a></li>{% endfor %}</ul>
+        </li>
+        {% endif %}
+        <li class="nav-lang-item" data-nav-lang="pt">
+          <a href="{{ PORTFOLIO_URL }}" target="_blank"><i class="bi bi-person-badge navicon"></i> Portfólio</a>
+        </li>
+        <li class="nav-lang-item" data-nav-lang="en" style="display:none">
+          <a href="{{ PORTFOLIO_URL }}" target="_blank"><i class="bi bi-person-badge navicon"></i> Portfolio</a>
+        </li>
+
+      {% else %}
+        {# Article / Page: server-rendered no idioma correto #}
+        {% for p in pages if p.lang == current_lang %}
+        <li><a href="{{ SITEURL }}/{{ p.url }}" {% if page is defined and page.slug == p.slug %}class="active"{% endif %}>
+          <i class="bi bi-person navicon"></i> {{ p.title }}
+        </a></li>
+        {% endfor %}
+        {% if categories %}
+        <li class="dropdown">
+          <a href="#"><i class="bi bi-grid navicon"></i> {% if current_lang == 'en' %}Categories{% else %}Categorias{% endif %} <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>{% for cat, arts in categories %}<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }} <span class="badge-count">{{ arts | count }}</span></a></li>{% endfor %}</ul>
+        </li>
+        {% endif %}
+        <li><a href="{{ PORTFOLIO_URL }}" target="_blank">
+          <i class="bi bi-person-badge navicon"></i> {% if current_lang == 'en' %}Portfolio{% else %}Portfólio{% endif %}
+        </a></li>
       {% endif %}
-      <li><a href="{{ PORTFOLIO_URL }}" target="_blank">
-        <i class="bi bi-person-badge navicon"></i> Portfólio
-      </a></li>
     </ul>
   </nav>
 </header>

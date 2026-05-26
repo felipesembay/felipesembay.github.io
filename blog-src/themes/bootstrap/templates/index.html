@@ -97,11 +97,16 @@
   var saved = localStorage.getItem('blog-lang') || 'pt';
 
   function activateLang(lang) {
-    // Seções
+    // Seções de posts
     document.getElementById('section-pt').style.display = (lang === 'pt') ? 'block' : 'none';
     document.getElementById('section-en').style.display = (lang === 'en') ? 'block' : 'none';
 
-    // Botões da sidebar — marca ativo
+    // Itens do nav lateral
+    document.querySelectorAll('.nav-lang-item').forEach(function(el) {
+      el.style.display = (el.dataset.navLang === lang) ? '' : 'none';
+    });
+
+    // Botões de idioma — marca ativo
     document.querySelectorAll('.lang-btn').forEach(function(btn) {
       btn.classList.toggle('active-lang', btn.dataset.lang === lang);
     });

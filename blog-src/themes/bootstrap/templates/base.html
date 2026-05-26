@@ -49,12 +49,13 @@
 
   <p class="sidebar-subtitle text-center">Data Scientist &amp; ML Engineer</p>
 
-  <!-- Language switcher (igual ao iPortfolio) -->
+  <!-- Language switcher -->
+  {% set current_lang = article.lang if article is defined else (page.lang if page is defined else DEFAULT_LANG) %}
   <div class="lang-switcher text-center">
-    <a href="{{ SITEURL }}/pages/sobre.html" class="lang-btn" data-lang="pt" title="Português">
+    <a href="{{ SITEURL }}/pages/sobre.html" class="lang-btn{% if current_lang == 'pt' %} active-lang{% endif %}" data-lang="pt" title="Português">
       <span>🇧🇷</span> PT
     </a>
-    <a href="{{ SITEURL }}/pages/about.html" class="lang-btn" data-lang="en" title="English">
+    <a href="{{ SITEURL }}/pages/about.html" class="lang-btn{% if current_lang == 'en' %} active-lang{% endif %}" data-lang="en" title="English">
       <span>🇺🇸</span> EN
     </a>
   </div>
@@ -144,17 +145,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>
   hljs.highlightAll();
-
-  // Lang switcher — marca botão ativo
-  // No índice: index.html JS cuida disso (não interferir)
-  // Em artigos/pages: usa <html lang> que o template já define corretamente
-  (function() {
-    if (document.getElementById('section-pt')) return; // índice — deixa index.html JS agir
-    const lang = document.documentElement.lang || 'pt';
-    document.querySelectorAll('.lang-btn').forEach(function(btn) {
-      btn.classList.toggle('active-lang', btn.dataset.lang === lang);
-    });
-  })();
 
   // Sidebar toggle (mobile)
   const toggle = document.querySelector('.sidebar-toggle');

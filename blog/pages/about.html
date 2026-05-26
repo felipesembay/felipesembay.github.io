@@ -126,13 +126,14 @@
 <script>
   hljs.highlightAll();
 
-  // Lang switcher — marca botão ativo pela URL atual
+  // Lang switcher — marca botão ativo
+  // No índice: index.html JS cuida disso (não interferir)
+  // Em artigos/pages: usa <html lang> que o template já define corretamente
   (function() {
-    const path = window.location.pathname;
-    const isEN = path.includes('/about');
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      const isActive = (isEN && btn.dataset.lang === 'en') || (!isEN && btn.dataset.lang === 'pt');
-      if (isActive) btn.classList.add('active-lang');
+    if (document.getElementById('section-pt')) return; // índice — deixa index.html JS agir
+    const lang = document.documentElement.lang || 'pt';
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active-lang', btn.dataset.lang === lang);
     });
   })();
 

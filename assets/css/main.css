@@ -673,6 +673,10 @@ section,
   margin-left: 60px;
 }
 
+.stats .stats-item .purecounter[data-suffix]::after {
+  content: attr(data-suffix);
+}
+
 .stats .stats-item p {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding: 15px 0 0 0;

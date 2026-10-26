@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ScholarRAG — Assistente RAG Acadêmico | Felipe Sembay</title>
+    <meta content="Assistente RAG para pesquisa e escrita acadêmica: busca híbrida com Elasticsearch, respostas fundamentadas e citações ABNT/APA geradas por código." name="description">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .project-links a,
+        .project-links span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--accent-color, #0563bb);
+            color: var(--accent-color, #0563bb);
+            transition: all 0.3s;
+        }
+
+        .project-links a:hover {
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+        }
+
+        .project-links .disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .metrics-table {
+            width: 100%;
+            font-size: 14px;
+            margin: 10px 0 15px;
+        }
+
+        .metrics-table th,
+        .metrics-table td {
+            padding: 6px 8px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2RH8SQZT43"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2RH8SQZT43');
+</script>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img"><img src="assets/img/my-profile-img.png" alt="Felipe Sembay"
+                class="img-fluid rounded-circle"></div>
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Felipe Sembay</h1>
+        </a>
+        <div class="lang-switcher">
+            <a href="portfolio-scholar-rag.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-scholar-rag-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+        <div class="social-links text-center">
+            <a href="https://github.com/felipesembay" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/felipesembay" class="linkedin" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index-pt.html#hero"><i class="bi bi-house navicon"></i> Início</a></li>
+                <li><a href="index-pt.html#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="index-pt.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="index-pt.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfólio</a>
+                </li>
+                <li><a href="index-pt.html#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="index-pt.html#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">ScholarRAG — Assistente RAG Acadêmico</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index-pt.html">Início</a></li>
+                        <li><a href="index-pt.html#portfolio">Portfólio</a></li>
+                        <li class="current">ScholarRAG</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/scholar-rag/scholar_rag_1.png"
+                                        alt="ScholarRAG — Tela inicial">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/scholar-rag/scholar_rag_2.png"
+                                        alt="ScholarRAG — Chat com citações e referências geradas por código">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/scholar-rag/scholar_rag_3.png"
+                                        alt="ScholarRAG — Biblioteca com citações ABNT">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/scholar-rag/scholar_rag_4.png"
+                                        alt="ScholarRAG — Rascunho do artigo com marcadores [PENDENTE] para trechos sem fonte">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Informações do Projeto</h3>
+                            <ul>
+                                <li><strong>Categoria:</strong> IA Generativa & NLP (RAG)</li>
+                                <li><strong>Tipo:</strong> Ferramenta pessoal desenvolvida no mestrado (self-hosted com Docker)</li>
+                                <li><strong>Status:</strong> Concluído — uso pessoal, sem deploy</li>
+                                <li><strong>GitHub:</strong> <a
+                                        href="https://github.com/felipesembay/Scholar_RAG"
+                                        target="_blank">Ver Repositório →</a></li>
+                            </ul>
+                            <div class="project-links">
+                                <span title="Roda localmente com Docker"><i class="bi bi-hdd-network"></i> Roda localmente com Docker</span>
+                                <a href="https://github.com/felipesembay/Scholar_RAG" target="_blank"><i
+                                        class="bi bi-github"></i> GitHub</a>
+                                <!-- VIDEO: replace the <span> below with one of these links once the video is ready
+                                     YouTube: <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="glightbox"><i class="bi bi-youtube"></i> Video</a>
+                                     Drive:   <a href="https://drive.google.com/file/d/FILE_ID/preview" class="glightbox" data-type="external"><i class="bi bi-play-circle"></i> Video</a> -->
+                                <span class="disabled" title="Vídeo (em breve)"><i class="bi bi-play-circle"></i>
+                                    Vídeo (em breve)</span>
+                            </div>
+                            <div class="mt-3">
+                                <strong>Tecnologias:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">LangChain</span>
+                                <span class="tech-badge">uv</span>
+                                <span class="tech-badge">Elasticsearch</span>
+                                <span class="tech-badge">BM25 + kNN (RRF)</span>
+                                <span class="tech-badge">bge-m3</span>
+                                <span class="tech-badge">bge-reranker-v2-m3</span>
+                                <span class="tech-badge">pdfplumber</span>
+                                <span class="tech-badge">Tesseract OCR</span>
+                                <span class="tech-badge">Docling</span>
+                                <span class="tech-badge">Crossref API</span>
+                                <span class="tech-badge">OpenRouter</span>
+                                <span class="tech-badge">Ollama</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">Vite</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">Radix UI</span>
+                                <span class="tech-badge">Docker Compose</span>
+                                <span class="tech-badge">pytest</span>
+                                <span class="tech-badge">ruff</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>ScholarRAG: Assistente RAG para Pesquisa e Escrita Acadêmica</h2>
+                            <p>Assistente de <em>Retrieval-Augmented Generation</em> desenvolvido durante o meu
+                                mestrado. Você alimenta um projeto com o seu material (artigos, livros, aulas,
+                                códigos, bases de dados) e com <strong>os seus resultados</strong>, e a aplicação
+                                responde perguntas, redige o artigo seção a seção, revisa e propõe correções, sempre
+                                com citações vinculadas às fontes fornecidas.</p>
+                            <p>Regra central do projeto: <strong>o modelo de linguagem nunca escreve uma
+                                    referência</strong>. Ele só aponta fontes numeradas (<code>[1]</code>,
+                                <code>[2, 3]</code>); autor, ano, página e a lista de referências são montados por
+                                código a partir da biblioteca do projeto (ABNT NBR 10520/6023 ou APA 7). Marcadores
+                                que apontam para fontes inexistentes são descartados, então uma referência inventada
+                                não chega ao texto final.</p>
+
+                            <h4 class="mt-3">Arquitetura</h4>
+                            <p>React (Vite) → FastAPI → ingestão (pdfplumber / Tesseract / Docling, Office,
+                                notebooks) → Elasticsearch 8.19 com busca híbrida BM25 + kNN e fusão RRF (embeddings
+                                <code>bge-m3</code>) → reranking com cross-encoder (<code>bge-reranker-v2-m3</code>)
+                                → qualquer LLM compatível com OpenAI (OpenRouter, OpenAI ou Ollama), com modelos
+                                separados para chat, escrita e análise.</p>
+
+                            <h4 class="mt-3">Funcionalidades</h4>
+                            <ul>
+                                <li><i class="bi bi-file-earmark-arrow-up text-primary"></i> Ingestão de PDF, DOCX,
+                                    PPTX, XLSX/CSV, Markdown, notebooks Jupyter, scripts R/Python, imagens (OCR) e ZIP
+                                    com pastas; tabelas preservadas e DOI enriquecido pelo Crossref</li>
+                                <li><i class="bi bi-book text-primary"></i> Biblioteca bibliográfica editável, separando
+                                    literatura citável, material de apoio e resultados da pesquisa; exportação
+                                    BibTeX</li>
+                                <li><i class="bi bi-chat-quote text-primary"></i> Chat com citações clicáveis que abrem
+                                    o trecho e a página exatos da fonte</li>
+                                <li><i class="bi bi-pencil-square text-primary"></i> Redação do artigo seção a seção,
+                                    importação de rascunho em Word/PDF/Markdown e exportação em Markdown, DOCX e LaTeX
+                                    (abnTeX2 ou natbib, pronto para o Overleaf)</li>
+                                <li><i class="bi bi-clipboard-check text-primary"></i> Análise com verificações exatas e
+                                    um modelo revisor que recebe os trechos citados, apontando citações que não
+                                    sustentam a afirmação</li>
+                                <li><i class="bi bi-arrow-left-right text-primary"></i> Propostas de correção por
+                                    seção, com diferenças por parágrafo e palavra, aceitas ou rejeitadas pelo
+                                    autor</li>
+                            </ul>
+
+                            <h4 class="mt-3">Principais Destaques</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> Referências inventadas bloqueadas
+                                    por design: citações formatadas por código, nunca pelo LLM</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Busca híbrida + reranking com
+                                    modelos de embeddings e reranking rodando localmente</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Camada de LLM independente de
+                                    provedor (modelos gratuitos ou pagos, na nuvem ou locais com Ollama)</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Stack completa em um único
+                                    <code>docker-compose up</code> (Elasticsearch, FastAPI e React)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Felipe Sembay</strong> <span>Todos os Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">Design por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/analytics.js"></script>
+</body>
+
+</html>

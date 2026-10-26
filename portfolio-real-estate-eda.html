@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Intelligent Real-Estate Pricing | Felipe Sembay</title>
     <meta
-        content="Data science project: Exploratory Data Analysis of the Brazilian real-estate market with Plotly and GeoPandas."
+        content="End-to-end ML project: sale price (Ponta Grossa) and rent (São Paulo) prediction with geospatial features, MLflow, FastAPI and monitoring."
         name="description">
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -82,6 +82,50 @@
             font-size: 13px;
             opacity: 0.5;
             margin: 0;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .project-links a,
+        .project-links span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--accent-color, #0563bb);
+            color: var(--accent-color, #0563bb);
+            transition: all 0.3s;
+        }
+
+        .project-links a:hover {
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+        }
+
+        .project-links .disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .metrics-table {
+            width: 100%;
+            font-size: 14px;
+            margin: 10px 0 15px;
+        }
+
+        .metrics-table th,
+        .metrics-table td {
+            padding: 6px 8px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         }
     </style>
 
@@ -180,60 +224,123 @@
                             <h3>Project Information</h3>
                             <ul>
                                 <li><strong>Category:</strong> Data Science & Machine Learning</li>
-                                <li><strong>Type:</strong> End-to-End Project (EDA → Modeling → Deploy → Monitoring)
-                                </li>
-                                <li><strong>Status:</strong> Completed (with continuous evolution)</li>
+                                <li><strong>Type:</strong> End-to-End Project (EDA → Inference → Modeling → Deploy → Monitoring)</li>
+                                <li><strong>Status:</strong> In production (with continuous evolution)</li>
                                 <li><strong>GitHub:</strong> <a
-                                        href="https://github.com/felipesembay/Price_house_ponta_grossa"
+                                        href="https://github.com/felipesembay/previsao-precos-imoveis"
                                         target="_blank">View Repository →</a></li>
                             </ul>
+                            <div class="project-links">
+                                <a href="https://previsao-precos-imoveis.vercel.app/modelo" target="_blank"><i
+                                        class="bi bi-box-arrow-up-right"></i> Live App</a>
+                                <a href="https://github.com/felipesembay/previsao-precos-imoveis" target="_blank"><i
+                                        class="bi bi-github"></i> GitHub</a>
+                                <!-- VIDEO: replace the <span> below with one of these links once the video is ready
+                                     YouTube: <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="glightbox"><i class="bi bi-youtube"></i> Video</a>
+                                     Drive:   <a href="https://drive.google.com/file/d/FILE_ID/preview" class="glightbox" data-type="external"><i class="bi bi-play-circle"></i> Video</a> -->
+                                <span class="disabled" title="Video (coming soon)"><i class="bi bi-play-circle"></i>
+                                    Video (coming soon)</span>
+                            </div>
                             <div class="mt-3">
                                 <strong>Technologies:</strong><br>
                                 <span class="tech-badge">Python</span>
                                 <span class="tech-badge">Pandas</span>
-                                <span class="tech-badge">Numpy</span>
+                                <span class="tech-badge">NumPy</span>
                                 <span class="tech-badge">Scikit-learn</span>
                                 <span class="tech-badge">XGBoost</span>
-                                <span class="tech-badge">Folium</span>
-                                <span class="tech-badge">Seaborn</span>
-                                <span class="tech-badge">Geopandas</span>
+                                <span class="tech-badge">Optuna</span>
+                                <span class="tech-badge">SHAP</span>
+                                <span class="tech-badge">Statsmodels</span>
+                                <span class="tech-badge">GeoPandas</span>
                                 <span class="tech-badge">OSMnx</span>
-                                <span class="tech-badge">Streamlit</span>
                                 <span class="tech-badge">FastAPI</span>
-                                <span class="tech-badge">Docker</span>
-                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Streamlit</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">Leaflet</span>
+                                <span class="tech-badge">PostgreSQL</span>
                                 <span class="tech-badge">MLflow</span>
                                 <span class="tech-badge">Evidently</span>
-                                <span class="tech-badge">Metabase</span>
+                                <span class="tech-badge">Airflow</span>
+                                <span class="tech-badge">Prometheus</span>
                                 <span class="tech-badge">Grafana</span>
+                                <span class="tech-badge">Metabase</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Terraform</span>
+                                <span class="tech-badge">Azure</span>
+                                <span class="tech-badge">Render</span>
+                                <span class="tech-badge">Vercel</span>
                             </div>
                         </div>
                         <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                             <h2>Intelligent Real Estate Pricing with Geolocation</h2>
-                            <p>Complete real estate pricing project spanning from exploratory data analysis to the
-                                implementation of a prediction system in production, utilizing structural property
-                                characteristics and dynamic geospatial features.</p>
-                            <p>The model estimates property values based on the address (via Google Maps), automatically
-                                calculates location scores based on OpenStreetMap POIs (schools, hospitals, markets,
-                                parks, security, etc.), and returns real-time predictions through an API.
-                                The entire pipeline was developed focusing on scalability, traceability, and model
+                            <p>Two end-to-end Data Science and MLOps projects for real-estate pricing that share the
+                                same technical foundation: data collection → geocoding → geospatial enrichment (POIs)
+                                → EDA and statistical inference → modeling → versioning (MLflow) → API / interface →
                                 monitoring.</p>
+                            <p>The user types an address, which is geocoded (Google Maps / OpenCage); location scores
+                                are calculated from OpenStreetMap POIs (schools, hospitals, subway, markets, parks,
+                                etc.) and the model returns the estimated price in real time through the API. The
+                                web app is live on Vercel, with the API hosted on Render and the database on Azure.</p>
+
+                            <h4 class="mt-3">🏡 Sale Price — Ponta Grossa (PR)</h4>
+                            <p>Sale price prediction from ZAP Imóveis listings, with the full cycle in production: API,
+                                web interface, database and drift monitoring.</p>
+                            <table class="metrics-table">
+                                <thead>
+                                    <tr><th>Holdout (log scale)</th><th>XGBoost</th><th>Linear Reg.</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>R²</td><td><strong>0.847</strong></td><td>0.660</td></tr>
+                                    <tr><td>RMSE</td><td><strong>0.323</strong></td><td>0.481</td></tr>
+                                    <tr><td>MAE</td><td><strong>0.231</strong></td><td>0.371</td></tr>
+                                </tbody>
+                            </table>
+
+                            <h4 class="mt-3">🏙️ Monthly Rent — São Paulo (SP)</h4>
+                            <p>Rent prediction for ~30k residential listings in São Paulo. Before modeling, a complete
+                                statistical inference study (OLS with region fixed effects and clustered errors) to
+                                separate <em>association</em> from <em>controlled effect</em>. XGBoost tuned with
+                                Optuna, 20 numerical features + property type.</p>
+                            <table class="metrics-table">
+                                <thead>
+                                    <tr><th>Holdout (20%)</th><th>XGBoost</th><th>Linear Reg.</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>R² (log)</td><td><strong>0.875</strong></td><td>0.784</td></tr>
+                                    <tr><td>MAE</td><td><strong>R$ 904</strong></td><td>R$ 1,220</td></tr>
+                                    <tr><td>MAPE</td><td><strong>18.5%</strong></td><td>24.8%</td></tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li><i class="bi bi-geo-alt text-primary"></i> Central is not the same as upscale: rent
+                                    per m² peaks ~4 km from downtown, on the Pinheiros–Vila Mariana–Itaim axis (5.2×
+                                    variation between regions)</li>
+                                <li><i class="bi bi-rulers text-primary"></i> Area elasticity below 1: +10% area →
+                                    +6.3% rent</li>
+                                <li><i class="bi bi-house-gear text-primary"></i> Association ≠ effect: furnished looks
+                                    like +42% and pool +41%; controlling for size and region, they drop to +14% and
+                                    +8%</li>
+                                <li><i class="bi bi-train-front text-primary"></i> Subway is the exception among POIs:
+                                    +19% within 300 m of a station, decaying to +5% at 1.5–2 km</li>
+                                <li><i class="bi bi-cash-coin text-primary"></i> Condo fee + property tax add a median
+                                    of 23.6% on top of rent</li>
+                            </ul>
+
                             <h4 class="mt-3">Key Highlights</h4>
                             <ul>
-                                <li><i class="bi bi-check-circle text-primary"></i> Complete Machine Learning pipeline
-                                    in production</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Automatic data enrichment via Google
-                                    Maps + OpenStreetMap</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Dynamic calculation of geospatial
-                                    scores in any city in Brazil</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Comparison between advertised price
-                                    vs. predicted price, with error metrics</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Monitoring of data drift and model
-                                    performance</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Clear separation between data layer,
-                                    model, API, frontend, and observability</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Interactive dashboard with Metabase
-                                    + Grafana</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Complete ML pipeline in production
+                                    (React frontend on Vercel + FastAPI on Render + PostgreSQL on Azure)</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Automatic data enrichment via
+                                    geocoding + OpenStreetMap</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Model versioning and champion ×
+                                    challenger promotion with the MLflow Model Registry</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Data drift (Wasserstein) and real
+                                    performance monitoring with Evidently, Prometheus and Grafana alerts</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Automatic rent model retraining
+                                    with Airflow (performance, drift and age triggers)</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Cloud infrastructure as code with
+                                    Terraform, kept within the free tier</li>
                             </ul>
                         </div>
                     </div>

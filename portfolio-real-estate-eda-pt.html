@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Precificação de Imóveis | Felipe Sembay</title>
-    <meta content="Trabalho de Data Science focado no mercado imobiliário com Plotly e mapeamento geoespacial."
+    <meta content="Projeto end-to-end de ML: previsão de preço de venda (Ponta Grossa) e aluguel (São Paulo) com features geoespaciais, MLflow, FastAPI e monitoramento."
         name="description">
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -81,6 +81,50 @@
             font-size: 13px;
             opacity: 0.5;
             margin: 0;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .project-links a,
+        .project-links span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--accent-color, #0563bb);
+            color: var(--accent-color, #0563bb);
+            transition: all 0.3s;
+        }
+
+        .project-links a:hover {
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+        }
+
+        .project-links .disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .metrics-table {
+            width: 100%;
+            font-size: 14px;
+            margin: 10px 0 15px;
+        }
+
+        .metrics-table th,
+        .metrics-table td {
+            padding: 6px 8px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         }
     </style>
 
@@ -178,62 +222,122 @@
                             <h3>Informações do Projeto</h3>
                             <ul>
                                 <li><strong>Categoria:</strong> Ciência de Dados & Machine Learning</li>
-                                <li><strong>Tipo:</strong> Projeto End-to-End (EDA → Modelagem → Deploy → Monitoramento)
-                                </li>
-                                <li><strong>Status:</strong> Concluído (com evolução contínua)</li>
+                                <li><strong>Tipo:</strong> Projeto End-to-End (EDA → Inferência → Modelagem → Deploy → Monitoramento)</li>
+                                <li><strong>Status:</strong> Em produção (com evolução contínua)</li>
                                 <li><strong>GitHub:</strong> <a
-                                        href="https://github.com/felipesembay/Price_house_ponta_grossa"
+                                        href="https://github.com/felipesembay/previsao-precos-imoveis"
                                         target="_blank">Ver Repositório →</a></li>
                             </ul>
+                            <div class="project-links">
+                                <a href="https://previsao-precos-imoveis.vercel.app/modelo" target="_blank"><i
+                                        class="bi bi-box-arrow-up-right"></i> App Online</a>
+                                <a href="https://github.com/felipesembay/previsao-precos-imoveis" target="_blank"><i
+                                        class="bi bi-github"></i> GitHub</a>
+                                <!-- VIDEO: replace the <span> below with one of these links once the video is ready
+                                     YouTube: <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="glightbox"><i class="bi bi-youtube"></i> Video</a>
+                                     Drive:   <a href="https://drive.google.com/file/d/FILE_ID/preview" class="glightbox" data-type="external"><i class="bi bi-play-circle"></i> Video</a> -->
+                                <span class="disabled" title="Vídeo (em breve)"><i class="bi bi-play-circle"></i>
+                                    Vídeo (em breve)</span>
+                            </div>
                             <div class="mt-3">
                                 <strong>Tecnologias:</strong><br>
                                 <span class="tech-badge">Python</span>
                                 <span class="tech-badge">Pandas</span>
-                                <span class="tech-badge">Numpy</span>
+                                <span class="tech-badge">NumPy</span>
                                 <span class="tech-badge">Scikit-learn</span>
                                 <span class="tech-badge">XGBoost</span>
-                                <span class="tech-badge">Folium</span>
-                                <span class="tech-badge">Seaborn</span>
-                                <span class="tech-badge">Geopandas</span>
+                                <span class="tech-badge">Optuna</span>
+                                <span class="tech-badge">SHAP</span>
+                                <span class="tech-badge">Statsmodels</span>
+                                <span class="tech-badge">GeoPandas</span>
                                 <span class="tech-badge">OSMnx</span>
-                                <span class="tech-badge">Streamlit</span>
                                 <span class="tech-badge">FastAPI</span>
-                                <span class="tech-badge">Docker</span>
-                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Streamlit</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">Leaflet</span>
+                                <span class="tech-badge">PostgreSQL</span>
                                 <span class="tech-badge">MLflow</span>
                                 <span class="tech-badge">Evidently</span>
-                                <span class="tech-badge">Metabase</span>
+                                <span class="tech-badge">Airflow</span>
+                                <span class="tech-badge">Prometheus</span>
                                 <span class="tech-badge">Grafana</span>
+                                <span class="tech-badge">Metabase</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Terraform</span>
+                                <span class="tech-badge">Azure</span>
+                                <span class="tech-badge">Render</span>
+                                <span class="tech-badge">Vercel</span>
                             </div>
                         </div>
                         <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                             <h2>Precificação Inteligente de Imóveis com Geolocalização</h2>
-                            <p>Projeto completo de precificação imobiliária que vai desde a análise exploratória dos
-                                dados até a implementação de um sistema de predição em produção, utilizando
-                                características estruturais do imóvel e features geoespaciais dinâmicas.</p>
-                            <p>O modelo estima o valor de imóveis a partir do endereço (via Google Maps), calcula
-                                automaticamente scores de localização com base em POIs do OpenStreetMap (escolas,
-                                hospitais, mercados, parques, segurança, etc.) e retorna a previsão em tempo real por
-                                meio de uma API.
-                                Todo o pipeline foi desenvolvido com foco em escalabilidade, rastreabilidade e
-                                monitoramento do modelo.
-                            </p>
+                            <p>Dois projetos end-to-end de Ciência de Dados e MLOps para precificação de imóveis, que
+                                compartilham a mesma base técnica: coleta → geocoding → enriquecimento geoespacial
+                                (POIs) → EDA e inferência estatística → modelagem → versionamento (MLflow) → API /
+                                interface → monitoramento.</p>
+                            <p>O usuário digita um endereço, que é geocodificado (Google Maps / OpenCage); os scores de
+                                localização são calculados a partir de POIs do OpenStreetMap (escolas, hospitais,
+                                metrô, mercados, parques etc.) e o modelo retorna o preço estimado em tempo real pela
+                                API. O app está no ar na Vercel, com a API no Render e o banco no Azure.</p>
+
+                            <h4 class="mt-3">🏡 Preço de Venda — Ponta Grossa (PR)</h4>
+                            <p>Previsão do preço de venda a partir de anúncios do ZAP Imóveis, com o ciclo completo em
+                                produção: API, interface web, banco de dados e monitoramento de drift.</p>
+                            <table class="metrics-table">
+                                <thead>
+                                    <tr><th>Holdout (escala log)</th><th>XGBoost</th><th>Reg. Linear</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>R²</td><td><strong>0,847</strong></td><td>0,660</td></tr>
+                                    <tr><td>RMSE</td><td><strong>0,323</strong></td><td>0,481</td></tr>
+                                    <tr><td>MAE</td><td><strong>0,231</strong></td><td>0,371</td></tr>
+                                </tbody>
+                            </table>
+
+                            <h4 class="mt-3">🏙️ Aluguel Mensal — São Paulo (SP)</h4>
+                            <p>Previsão do aluguel de ~30 mil anúncios residenciais em São Paulo. Antes do modelo, um
+                                estudo completo de inferência estatística (OLS com efeito fixo de região e erros
+                                agrupados) para separar <em>associação</em> de <em>efeito controlado</em>. XGBoost
+                                otimizado com Optuna, 20 features numéricas + tipo do imóvel.</p>
+                            <table class="metrics-table">
+                                <thead>
+                                    <tr><th>Holdout (20%)</th><th>XGBoost</th><th>Reg. Linear</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>R² (log)</td><td><strong>0,875</strong></td><td>0,784</td></tr>
+                                    <tr><td>MAE</td><td><strong>R$ 904</strong></td><td>R$ 1.220</td></tr>
+                                    <tr><td>MAPE</td><td><strong>18,5%</strong></td><td>24,8%</td></tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li><i class="bi bi-geo-alt text-primary"></i> Central não é o mesmo que nobre: o
+                                    aluguel por m² tem pico a ~4 km do marco zero, no eixo Pinheiros–Vila Mariana–Itaim
+                                    (variação de 5,2× entre regiões)</li>
+                                <li><i class="bi bi-rulers text-primary"></i> Elasticidade da área menor que 1: +10% de
+                                    área → +6,3% de aluguel</li>
+                                <li><i class="bi bi-house-gear text-primary"></i> Associação ≠ efeito: mobiliado parece
+                                    +42% e piscina +41%; controlando tamanho e região, ficam em +14% e +8%</li>
+                                <li><i class="bi bi-train-front text-primary"></i> Metrô é a exceção entre os POIs: +19%
+                                    a até 300 m da estação, caindo para +5% a 1,5–2 km</li>
+                                <li><i class="bi bi-cash-coin text-primary"></i> Condomínio + IPTU somam, na mediana,
+                                    23,6% sobre o aluguel</li>
+                            </ul>
+
                             <h4 class="mt-3">Principais Destaques</h4>
                             <ul>
-                                <li><i class="bi bi-check-circle text-primary"></i> Pipeline completo de Machine
-                                    Learning em produção</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Pipeline completo de ML em produção
+                                    (frontend React na Vercel + FastAPI no Render + PostgreSQL no Azure)</li>
                                 <li><i class="bi bi-check-circle text-primary"></i> Enriquecimento automático dos dados
-                                    via Google Maps + OpenStreetMap</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Cálculo dinâmico de scores
-                                    geoespaciais em qualquer cidade do Brasil</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Comparação entre preço anunciado vs.
-                                    preço previsto, com métricas de erro</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Monitoramento de data drift e
-                                    performance do modelo</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Separação clara entre camada de
-                                    dados, modelo, API, frontend e observabilidade</li>
-                                <li><i class="bi bi-check-circle text-primary"></i> Dashboard interativo com Metabase +
-                                    Grafana</li>
+                                    via geocoding + OpenStreetMap</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Versionamento de modelos e promoção
+                                    champion × challenger com o MLflow Model Registry</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Monitoramento de data drift
+                                    (Wasserstein) e desempenho real com Evidently, alertas no Prometheus e Grafana</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Retreino automático do modelo de
+                                    aluguel com Airflow (gatilhos de desempenho, drift e idade)</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Infraestrutura em nuvem como código
+                                    com Terraform, dentro do plano gratuito</li>
                             </ul>
                         </div>
                     </div>
